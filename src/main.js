@@ -1,6 +1,6 @@
 import './styles/main.css';
 import './styles/storyDuration.css';
-import storytellerAvatar from './assets/storyteller-avatar.png';
+import storytellerAvatar from './assets/storyteller-avatar.webp';
 import { classicStories } from './data/classicStories.js';
 import { getStoryDurationSettings, storyDurationOptions } from './data/storyDurationOptions.js';
 import { generateStory } from './services/aiStoryService.js';
