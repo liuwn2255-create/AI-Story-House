@@ -11,6 +11,14 @@
 .duration-card-content>span:not(.duration-icon){font-size:11px;color:#898477;line-height:1.4}
 .duration-card-content small{font-size:9px;color:#a4967d;line-height:1.35}
 .reader-duration{font-size:11px;color:#a4967d;margin:8px 0 0}
+.reader-scene-visual{width:100%;max-width:640px;aspect-ratio:16/9;margin:26px auto 0;border:1px solid #e8e2d8;border-radius:16px;overflow:hidden;background:#f1eee4}
+.reader-scene-image{display:block;width:100%;height:100%;object-fit:cover}
+.reader-image-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px;text-align:center;color:#797967;background:radial-gradient(ellipse at 18% 90%,#dce5d6 0 16%,transparent 17%),radial-gradient(ellipse at 82% 100%,#e9ddc7 0 20%,transparent 21%),linear-gradient(145deg,#f7eedc,#e8eee4 58%,#f3e7d7)}
+.reader-image-placeholder>span{font-size:clamp(24px,5vw,40px);letter-spacing:.18em}
+.reader-image-placeholder strong{font-family:'Noto Serif TC',serif;font-size:clamp(16px,3vw,22px);color:#625f55}
+.reader-image-placeholder small{font-size:12px;color:#898477}
+.reader-image-placeholder[hidden]{display:none}
+.reader-scene-visual+.reader-scene{padding-top:25px}
 .voice-placeholder .storyteller{margin:0;gap:8px;flex:none}
 .voice-placeholder .storyteller strong{font-size:11px}
 .voice-placeholder .storyteller>div>span{font-size:9px;margin-top:2px}
