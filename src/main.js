@@ -1,11 +1,12 @@
 import './styles/main.css';
 import './styles/storyDuration.css';
+import storytellerAvatar from './assets/storyteller-avatar.png';
 import { classicStories } from './data/classicStories.js';
 import { getStoryDurationSettings, storyDurationOptions } from './data/storyDurationOptions.js';
 import { generateStory } from './services/aiStoryService.js';
 import { deleteStory, getStories, saveStory, toggleFavorite } from './services/storyStorage.js';
 
-const avatar = '/src/assets/storyteller-avatar.png';
+const avatar = storytellerAvatar;
 const app = document.querySelector('#app');
 let currentStory = null;
 let sceneIndex = 0;
