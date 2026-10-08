@@ -6,7 +6,6 @@ import { getStoryDurationSettings, storyDurationOptions } from './data/storyDura
 import { generateStory } from './services/aiStoryService.js';
 import { deleteStory, getStories, saveStory, toggleFavorite } from './services/storyStorage.js';
 
-const avatar = storytellerAvatar;
 const app = document.querySelector('#app');
 let currentStory = null;
 let sceneIndex = 0;
@@ -14,7 +13,7 @@ let libraryFilter = 'all';
 
 const icon = (symbol) => `<span aria-hidden="true">${symbol}</span>`;
 function avatarView(size = '') {
-  return `<div class="avatar ${size}" aria-label="劉老師說故事頭像"><img src="${avatar}" alt="劉老師" onerror="this.hidden=true" /><span class="avatar-placeholder">劉</span></div>`;
+  return `<div class="avatar ${size}" aria-label="劉老師說故事頭像"><img src="${storytellerAvatar}" alt="劉老師" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" /><span class="avatar-placeholder">劉</span></div>`;
 }
 function header() {
   return `<header class="site-header"><a class="brand" href="#home" data-page="home"><span class="brand-mark">✦</span><span>AI Story House<small>AI 故事小屋</small></span></a><button class="menu-toggle" aria-label="開啟導覽" aria-expanded="false">☰</button><nav class="main-nav" aria-label="主要導覽"><a href="#home" data-page="home">首頁</a><a href="#create" data-page="create">創作故事</a><a href="#library" data-page="library">故事書架</a><a href="#mine" data-page="mine">我的故事</a></nav></header>`;

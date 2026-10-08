@@ -20,6 +20,8 @@
 .custom-duration label{font-size:12px;font-weight:600}
 .custom-duration-input{display:flex;align-items:center;gap:8px;color:#898477;font-size:12px}
 .custom-duration-input input{max-width:90px;height:40px}
+.avatar img{z-index:1}
+.avatar-placeholder{z-index:0}
 .form-note[data-state="error"]{color:#a74435;font-size:13px}
 .form-note[data-state="loading"]{color:#83765f;font-size:12px}
 @media(max-width:480px){.duration-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.duration-card-content{min-height:112px;padding:12px}.duration-card-content strong{font-size:13px}.duration-card-content small{font-size:9px}}
