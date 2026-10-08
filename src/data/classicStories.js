@@ -1,9 +1,9 @@
-import littleRedScene1 from '../assets/stories/little-red-riding-hood/scene-01.png';
-import littleRedScene2 from '../assets/stories/little-red-riding-hood/scene-02.png';
-import littleRedScene3 from '../assets/stories/little-red-riding-hood/scene-03.png';
-import littleRedScene4 from '../assets/stories/little-red-riding-hood/scene-04.png';
-import littleRedScene5 from '../assets/stories/little-red-riding-hood/scene-05.png';
-import littleRedScene6 from '../assets/stories/little-red-riding-hood/scene-06.png';
+import littleRedScene1 from '../assets/stories/little-red-riding-hood/scene-01.webp';
+import littleRedScene2 from '../assets/stories/little-red-riding-hood/scene-02.webp';
+import littleRedScene3 from '../assets/stories/little-red-riding-hood/scene-03.webp';
+import littleRedScene4 from '../assets/stories/little-red-riding-hood/scene-04.webp';
+import littleRedScene5 from '../assets/stories/little-red-riding-hood/scene-05.webp';
+import littleRedScene6 from '../assets/stories/little-red-riding-hood/scene-06.webp';
 
 function makeClassicStory({ id, title, characters, setting, theme, scenes }) {
   return {
