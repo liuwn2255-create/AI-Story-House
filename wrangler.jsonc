@@ -1,0 +1,24 @@
+{
+  "name": "ai-story-house-worker",
+  "main": "worker/worker.js",
+  "compatibility_date": "2026-10-09",
+  "keep_vars": true,
+  "ratelimits": [
+    {
+      "name": "STORY_LIMITER",
+      "namespace_id": "2026100901",
+      "simple": {
+        "limit": 5,
+        "period": 60
+      }
+    },
+    {
+      "name": "STORY_IMAGE_LIMITER",
+      "namespace_id": "2026100902",
+      "simple": {
+        "limit": 2,
+        "period": 60
+      }
+    }
+  ]
+}

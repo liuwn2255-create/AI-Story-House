@@ -5,7 +5,7 @@ import littleRedScene4 from '../assets/stories/little-red-riding-hood/scene-04.w
 import littleRedScene5 from '../assets/stories/little-red-riding-hood/scene-05.webp';
 import littleRedScene6 from '../assets/stories/little-red-riding-hood/scene-06.webp';
 
-function makeClassicStory({ id, title, characters, setting, theme, scenes }) {
+function makeClassicStory({ id, title, characters, setting, theme, categories, scenes }) {
   return {
     id,
     title,
@@ -13,6 +13,7 @@ function makeClassicStory({ id, title, characters, setting, theme, scenes }) {
     characters,
     setting,
     theme,
+    categories,
     favorite: false,
     scenes: scenes.map(([sceneTitle, text, image = ''], index) => ({
       id: `${id}-scene-${index + 1}`,
@@ -28,7 +29,7 @@ function makeClassicStory({ id, title, characters, setting, theme, scenes }) {
 export const classicStories = [
   {
     id: 'classic-little-star', title: '小星星的回家路', type: 'classic',
-    characters: ['小星星'], setting: '夜空', theme: '勇氣與友誼', favorite: false,
+    characters: ['小星星'], setting: '夜空', theme: '勇氣與友誼', categories: ['冒險故事', '勇氣故事', '睡前故事'], favorite: false,
     scenes: [
       { id: 'star-1', title: '迷路的小星星', text: '夜空裡有一顆小星星，不小心和星星朋友走散了。牠望著遠方，心裡有一點害怕。', image: '', audio: '' },
       { id: 'star-2', title: '停下來想一想', text: '小星星記得朋友曾說，迷路時先停在安全的地方，再看看周圍的方向。牠找到一片安靜的星雲，讓自己慢慢平靜下來。', image: '', audio: '' },
@@ -39,7 +40,7 @@ export const classicStories = [
     ], createdAt: null,
   },
   makeClassicStory({
-    id: 'classic-three-little-pigs', title: '三隻小豬', characters: ['大豬', '二豬', '小豬', '大野狼'], setting: '森林旁的小村莊', theme: '準備與合作',
+    id: 'classic-three-little-pigs', title: '三隻小豬', characters: ['大豬', '二豬', '小豬', '大野狼'], setting: '森林旁的小村莊', theme: '準備與合作', categories: ['動物故事', '冒險故事', '趣味故事'],
     scenes: [
       ['離開豬媽媽的家', '三隻小豬長大了，決定各自蓋一間房子。豬媽媽提醒牠們：「做事別急，互相照應最重要。」'],
       ['稻草小屋', '大豬很快用稻草蓋好小屋，跑去找弟弟玩。二豬也用樹枝搭了房子，只有小豬先畫好圖，再一塊塊砌起磚牆。'],
@@ -50,7 +51,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-little-red-riding-hood', title: '小紅帽', characters: ['小紅帽', '外婆', '大野狼'], setting: '森林小徑與外婆家', theme: '聰明判斷與關心家人',
+    id: 'classic-little-red-riding-hood', title: '小紅帽', characters: ['小紅帽', '外婆', '大野狼'], setting: '森林小徑與外婆家', theme: '聰明判斷與關心家人', categories: ['動物故事', '冒險故事', '勇氣故事'],
     scenes: [
       ['送點心去外婆家', '小紅帽提著點心籃，要去探望住在森林另一頭的外婆。媽媽叮嚀她沿著大路走，遇到不認識的人不要透露太多行程。', littleRedScene1],
       ['林間的陌生人', '路上，大野狼笑著問她要去哪裡。小紅帽記得媽媽的提醒，只說自己要去探望家人，便繼續走在明亮的大路上。', littleRedScene2],
@@ -61,7 +62,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-tortoise-and-hare', title: '龜兔賽跑', characters: ['烏龜', '兔子'], setting: '森林賽道', theme: '耐心與謙虛',
+    id: 'classic-tortoise-and-hare', title: '龜兔賽跑', characters: ['烏龜', '兔子'], setting: '森林賽道', theme: '耐心與謙虛', categories: ['動物故事', '勇氣故事', '趣味故事'],
     scenes: [
       ['兔子的挑戰', '兔子常常笑烏龜走得慢。一天，烏龜平靜地說：「不如比一場，看誰先到山丘的大樹下。」'],
       ['比賽開始', '狐狸裁判吹響哨子，兔子像箭一樣跑出去。烏龜一步一步往前走，心裡只記得自己的方向。'],
@@ -72,7 +73,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-ugly-duckling', title: '醜小鴨', characters: ['小鴨', '天鵝家族'], setting: '湖畔與蘆葦叢', theme: '接納自己與尊重不同',
+    id: 'classic-ugly-duckling', title: '醜小鴨', characters: ['小鴨', '天鵝家族'], setting: '湖畔與蘆葦叢', theme: '接納自己與尊重不同', categories: ['動物故事', '溫馨故事', '勇氣故事'],
     scenes: [
       ['特別的蛋', '春天的湖邊，鴨媽媽孵出一群小鴨，其中一隻灰灰的大蛋晚了些才孵開。小鴨模樣和兄弟姊妹不一樣，心裡有些不安。'],
       ['尋找自己的位置', '小鴨努力跟大家一起游水，卻常被笑聲弄得難過。鴨媽媽安慰牠：「每個孩子都有自己的樣子，你值得被好好對待。」'],
@@ -83,7 +84,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-jack-and-beanstalk', title: '傑克與魔豆', characters: ['傑克', '巨人', '金色母雞'], setting: '村莊與雲端城堡', theme: '勇氣、誠實與負責',
+    id: 'classic-jack-and-beanstalk', title: '傑克與魔豆', characters: ['傑克', '巨人', '金色母雞'], setting: '村莊與雲端城堡', theme: '勇氣、誠實與負責', categories: ['冒險故事', '勇氣故事'],
     scenes: [
       ['家中的困難', '傑克和媽媽住在小村莊，最近家裡的牛沒有奶了。傑克帶牛去市集，希望換些生活用品，卻遇見一位神祕旅人。'],
       ['一把奇妙的豆子', '旅人用幾顆魔豆交換牛，傑克帶回家後，媽媽有些生氣。夜裡豆子發芽，長成一株高高的藤，直通雲朵上方。'],
@@ -94,7 +95,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-frog-prince', title: '青蛙王子', characters: ['公主', '青蛙王子'], setting: '王宮花園與池塘', theme: '守信與理解彼此',
+    id: 'classic-frog-prince', title: '青蛙王子', characters: ['公主', '青蛙王子'], setting: '王宮花園與池塘', theme: '守信與理解彼此', categories: ['動物故事', '冒險故事', '溫馨故事'],
     scenes: [
       ['池塘邊的金球', '公主最喜歡在花園玩金球。一天，球不小心掉進池塘，她看著水面發愁，不知道該怎麼辦。'],
       ['青蛙的提議', '一隻青蛙游到岸邊，答應幫忙找球，只希望公主願意和牠做朋友。公主點頭答應，青蛙便潛入水中把金球推回岸邊。'],
@@ -105,7 +106,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-snow-white', title: '白雪公主', characters: ['白雪公主', '七位小矮人', '王后'], setting: '森林小屋', theme: '善良、勇敢與辨別陌生人',
+    id: 'classic-snow-white', title: '白雪公主', characters: ['白雪公主', '七位小矮人', '王后'], setting: '森林小屋', theme: '善良、勇敢與辨別陌生人', categories: ['冒險故事', '勇氣故事', '溫馨故事'],
     scenes: [
       ['森林裡的新朋友', '白雪公主在森林中迷了路，找到七位小矮人的小屋。小矮人見她疲累，邀請她休息，也提醒她不要隨便替陌生人開門。'],
       ['小屋的新生活', '白雪公主和小矮人一起打掃、煮湯、照顧花園。她很喜歡這個家，大家也約好出門時互相告知去向。'],
@@ -116,7 +117,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-cinderella', title: '灰姑娘', characters: ['灰姑娘', '仙女教母', '王子'], setting: '家中與王宮舞會', theme: '善良、自信與珍惜機會',
+    id: 'classic-cinderella', title: '灰姑娘', characters: ['灰姑娘', '仙女教母', '王子'], setting: '家中與王宮舞會', theme: '善良、自信與珍惜機會', categories: ['溫馨故事', '勇氣故事'],
     scenes: [
       ['忙碌的日子', '灰姑娘每天幫忙整理家裡，雖然辛苦，仍會對小動物溫柔說話。她聽說王宮要舉辦舞會，也希望有機會看看盛大的花園。'],
       ['仙女教母的幫助', '一位仙女教母出現，替灰姑娘準備了漂亮衣裳和馬車。她提醒灰姑娘，魔法會在午夜結束，記得按時回家。'],
@@ -127,7 +128,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-sleeping-beauty', title: '睡美人', characters: ['艾琳公主', '國王與王后', '森林朋友'], setting: '王宮與沉睡花園', theme: '耐心、關懷與守護',
+    id: 'classic-sleeping-beauty', title: '睡美人', characters: ['艾琳公主', '國王與王后', '森林朋友'], setting: '王宮與沉睡花園', theme: '耐心、關懷與守護', categories: ['溫馨故事', '冒險故事', '睡前故事'],
     scenes: [
       ['王國的祝福', '艾琳公主出生時，大家送上許多祝福。只有一位沒收到邀請的女巫十分生氣，留下預言：公主長大後會遇到一段長久的沉睡。'],
       ['溫柔的守護', '王國裡的智者把預言改成：公主會在合適的時候醒來。國王與王后沒有讓她害怕，而是教她認識花園、朋友和生活中的安全規則。'],
@@ -138,7 +139,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-pinocchio', title: '木偶奇遇記', characters: ['皮諾丘', '傑佩托', '蟋蟀先生'], setting: '木匠小屋與奇妙旅程', theme: '誠實、責任與成長',
+    id: 'classic-pinocchio', title: '木偶奇遇記', characters: ['皮諾丘', '傑佩托', '蟋蟀先生'], setting: '木匠小屋與奇妙旅程', theme: '誠實、責任與成長', categories: ['冒險故事', '趣味故事', '勇氣故事'],
     scenes: [
       ['會走路的木偶', '木匠傑佩托做了一個木偶，取名皮諾丘。夜裡，藍色仙女讓木偶活了過來，並請蟋蟀先生陪他學習分辨對錯。'],
       ['第一次上學', '皮諾丘帶著課本出門，途中聽見熱鬧的戲院音樂，便忘了上學的約定。回家後，他坦白自己走錯了方向，鼻子也因魔法長了一小截。'],
@@ -149,7 +150,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-emperors-new-clothes', title: '皇帝的新衣', characters: ['皇帝', '裁縫', '小女孩'], setting: '王宮與城鎮廣場', theme: '誠實表達與謙虛',
+    id: 'classic-emperors-new-clothes', title: '皇帝的新衣', characters: ['皇帝', '裁縫', '小女孩'], setting: '王宮與城鎮廣場', theme: '誠實表達與謙虛', categories: ['趣味故事', '勇氣故事'],
     scenes: [
       ['喜歡新衣的皇帝', '皇帝很喜歡漂亮衣服，常常忙著挑選新款式。兩位裁縫說能織出一件神奇衣裳，只有聰明的人才看得見。'],
       ['看不見的布料', '裁縫假裝在織布，皇帝派大臣去查看。大臣什麼也沒看見，卻怕被說不聰明，只好稱讚那塊不存在的布。'],
@@ -160,7 +161,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-ali-baba', title: '阿里巴巴與四十大盜', characters: ['阿里巴巴', '馬爾吉娜', '四十大盜'], setting: '山谷與小鎮', theme: '機智、勇敢與守護鄰里',
+    id: 'classic-ali-baba', title: '阿里巴巴與四十大盜', characters: ['阿里巴巴', '馬爾吉娜', '四十大盜'], setting: '山谷與小鎮', theme: '機智、勇敢與守護鄰里', categories: ['冒險故事', '勇氣故事'],
     scenes: [
       ['樵夫的發現', '樵夫阿里巴巴在山谷工作時，遠遠看見一群人走向岩壁。帶頭的人說出「芝麻開門」，岩石竟打開一道門，眾人進入山洞。'],
       ['藏在山洞的秘密', '等人離開後，阿里巴巴也用咒語打開岩門。他發現裡面有許多財物，便只帶走足夠改善生活的一小袋，沒有拿走更多。'],
@@ -171,7 +172,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-golden-axe', title: '金斧頭銀斧頭', characters: ['樵夫', '河神'], setting: '清澈的小河邊', theme: '誠實與知足',
+    id: 'classic-golden-axe', title: '金斧頭銀斧頭', characters: ['樵夫', '河神'], setting: '清澈的小河邊', theme: '誠實與知足', categories: ['溫馨故事', '勇氣故事'],
     scenes: [
       ['河邊工作', '一位樵夫每天到河邊整理木材，靠自己的雙手生活。一天，他的鐵斧不小心滑落水中，找了好久都沒有找到。'],
       ['河神出現', '樵夫坐在岸邊嘆氣，河面忽然亮起柔和的光。河神浮出水面，問他為什麼難過，樵夫便如實說明斧頭的模樣。'],
@@ -182,7 +183,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-boy-who-cried-wolf', title: '狼來了', characters: ['牧羊童', '村民', '羊群'], setting: '山坡牧場', theme: '誠信與負責',
+    id: 'classic-boy-who-cried-wolf', title: '狼來了', characters: ['牧羊童', '村民', '羊群'], setting: '山坡牧場', theme: '誠信與負責', categories: ['動物故事', '勇氣故事'],
     scenes: [
       ['山坡上的日子', '牧羊童每天帶羊群到山坡吃草，工作有時很安靜。為了讓大家注意他，他忽然大喊：「狼來了！」'],
       ['第一次玩笑', '村民急忙拿著工具跑上山，卻發現牧羊童在笑。大家提醒他不要用危險的事開玩笑，他答應了，心裡卻沒有認真記住。'],
@@ -193,7 +194,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-north-wind-and-sun', title: '北風與太陽', characters: ['北風', '太陽', '旅人'], setting: '山路與原野', theme: '溫和與理解',
+    id: 'classic-north-wind-and-sun', title: '北風與太陽', characters: ['北風', '太陽', '旅人'], setting: '山路與原野', theme: '溫和與理解', categories: ['趣味故事', '冒險故事'],
     scenes: [
       ['誰比較有力量', '北風和太陽在山頂聊天，爭論誰的力量比較大。這時，一位旅人披著外套，正沿著山路慢慢前行。'],
       ['北風先試試', '北風鼓起力氣吹出強風，旅人的外套被吹得飄動。旅人趕緊把外套抓緊，還把衣領扣好，走得更小心。'],
@@ -204,7 +205,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-ant-and-cricket', title: '螞蟻與蟋蟀', characters: ['螞蟻', '蟋蟀'], setting: '草地與螞蟻的家', theme: '勤勞、分享與找到平衡',
+    id: 'classic-ant-and-cricket', title: '螞蟻與蟋蟀', characters: ['螞蟻', '蟋蟀'], setting: '草地與螞蟻的家', theme: '勤勞、分享與找到平衡', categories: ['動物故事', '溫馨故事', '趣味故事'],
     scenes: [
       ['夏日的歌聲', '夏天的草地上，蟋蟀每天唱歌，螞蟻則搬運種子和葉片。蟋蟀邀螞蟻一起玩，螞蟻說先把工作做好，晚點再來聽歌。'],
       ['不同的選擇', '蟋蟀覺得夏天還很長，不必急著準備。螞蟻則和同伴合作，把食物收好，也留出時間休息與玩耍。'],
@@ -215,7 +216,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-great-turnip', title: '拔蘿蔔', characters: ['老爺爺', '老奶奶', '小孫女', '小狗', '小貓', '小老鼠'], setting: '菜園', theme: '合作與團結',
+    id: 'classic-great-turnip', title: '拔蘿蔔', characters: ['老爺爺', '老奶奶', '小孫女', '小狗', '小貓', '小老鼠'], setting: '菜園', theme: '合作與團結', categories: ['動物故事', '溫馨故事', '趣味故事'],
     scenes: [
       ['種下一顆種子', '老爺爺在菜園種下一顆蘿蔔種子，每天澆水、除草。老奶奶和小孫女也常來看看，盼著它快快長大。'],
       ['長成大蘿蔔', '幾場春雨過後，蘿蔔長得又大又高。老爺爺抓住葉子往上拔，蘿蔔卻像在土裡睡著了一樣，怎麼也不動。'],
@@ -226,7 +227,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-monkey-king-heaven', title: '孫悟空大鬧天宮', characters: ['孫悟空', '玉皇大帝', '天庭仙友'], setting: '花果山與天庭', theme: '力量、責任與自我控制',
+    id: 'classic-monkey-king-heaven', title: '孫悟空大鬧天宮', characters: ['孫悟空', '玉皇大帝', '天庭仙友'], setting: '花果山與天庭', theme: '力量、責任與自我控制', categories: ['動物故事', '冒險故事', '趣味故事'],
     scenes: [
       ['花果山的美猴王', '孫悟空在花果山和猴子猴孫一起生活，大家都很喜歡他的機靈。一天，他聽說天庭有許多新奇的地方，便想去看看。'],
       ['初到天庭', '悟空受邀到天庭做客，卻覺得安排的職務太小，不知道如何把自己的想法說清楚。天庭仙友請他先冷靜，再一起討論適合的工作。'],
@@ -237,7 +238,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-change-moon', title: '嫦娥奔月', characters: ['嫦娥', '后羿', '玉兔'], setting: '人間村落與月宮', theme: '思念、善良與團圓',
+    id: 'classic-change-moon', title: '嫦娥奔月', characters: ['嫦娥', '后羿', '玉兔'], setting: '人間村落與月宮', theme: '思念、善良與團圓', categories: ['溫馨故事', '睡前故事'],
     scenes: [
       ['天空的難題', '很久以前，天空出現了許多太陽，田地變得乾燥，村民十分辛苦。勇敢的后羿走遍山川，幫大家尋找讓大地重新涼爽的方法。'],
       ['村民一起努力', '后羿找到調節天候的方法，村民也一起挖水渠、照顧作物。嫦娥則分享食物和種子，讓每個人都能度過困難的日子。'],
@@ -248,7 +249,7 @@ export const classicStories = [
     ],
   }),
   makeClassicStory({
-    id: 'classic-little-prince', title: '小王子', characters: ['小王子', '玫瑰', '狐狸', '飛行員'], setting: '小行星、沙漠與星際旅程', theme: '友誼、責任與珍惜',
+    id: 'classic-little-prince', title: '小王子', characters: ['小王子', '玫瑰', '狐狸', '飛行員'], setting: '小行星、沙漠與星際旅程', theme: '友誼、責任與珍惜', categories: ['冒險故事', '溫馨故事', '睡前故事'],
     scenes: [
       ['小小的星球', '小王子住在一顆小小的星球上，每天整理火山、拔掉新冒出的樹苗，也細心照顧一朵玫瑰。玫瑰有時驕傲，有時又很需要陪伴。'],
       ['出發旅行', '小王子想了解遠方，便拜訪幾顆星球，遇見忙著命令、計算和被稱讚的大人。每一站都讓他疑惑：大家為什麼忘了欣賞眼前的風景？'],
@@ -256,6 +257,51 @@ export const classicStories = [
       ['狐狸的請求', '狐狸希望小王子每天固定來陪牠，讓彼此慢慢熟悉。小王子照著約定前來，終於明白花園裡有很多玫瑰，但自己的玫瑰因為被他照顧，對他特別珍貴。'],
       ['想念玫瑰', '小王子開始想念自己的星球與玫瑰，擔心她獨自面對風雨。飛行員也想起自己重要的人，兩人決定珍惜相遇的時光，並用心記住彼此的約定。'],
       ['星光下的約定', '小王子帶著狐狸教他的友誼回到星際旅程，飛行員也修好飛機回家。每當夜空閃爍，飛行員便想起小王子的笑聲，知道愛與責任讓遠方的人仍能彼此陪伴。'],
+    ],
+  }),
+  makeClassicStory({
+    id: 'classic-ray-tracy-forest-adventure', title: 'Ray & Tracy 去森林探險',
+    characters: [
+      'Ray（8 歲亞洲男孩，黑色短髮、整齊瀏海，不戴眼鏡、不戴帽子）',
+      'Tracy（3 歲亞洲女孩，黑色雙馬尾、整齊瀏海）',
+    ],
+    setting: '森林步道與小溪', theme: '安全、合作與探索', categories: ['冒險故事', '勇氣故事', '溫馨故事'],
+    scenes: [
+      ['準備出發', 'Ray 和 Tracy 帶好水壺，準備和家人一起去森林散步。他們記得要跟著家人，不離開安全的步道。'],
+      ['森林路標', '他們沿著清楚的路標慢慢前進，邊走邊觀察不同形狀的葉子。Ray 發現一片葉子像小手，Tracy 開心地笑了。'],
+      ['小溪邊的發現', '來到小溪旁，他們看見一隻小蝴蝶停在花朵旁。Ray 和 Tracy 安靜地欣賞，不去抓牠。'],
+      ['聽見求助聲', '他們發現一隻迷路的小兔子。兩人留在安全的步道旁，沒有自己跑去找，而是請同行的大人一起幫忙。'],
+      ['平安回到營地', '最後，小兔子找到了家人。Ray 和 Tracy 也平安回到營地，開心地分享今天看到的蝴蝶、葉子和小兔子。'],
+    ],
+  }),
+  makeClassicStory({
+    id: 'classic-ray-tracy-rainy-day-adventure', title: 'Ray & Tracy 的雨天冒險',
+    characters: [
+      'Ray（8 歲亞洲男孩，黑色短髮、整齊瀏海，不戴眼鏡、不戴帽子）',
+      'Tracy（3 歲亞洲女孩，黑色雙馬尾、整齊瀏海）',
+    ],
+    setting: '下雨的家中與窗邊', theme: '合作、想像與雨天安全', categories: ['溫馨故事', '趣味故事'],
+    scenes: [
+      ['窗外下起雨', '雨滴一顆一顆落在窗戶上。Ray 和 Tracy 發現原本的戶外計畫不能照原來的方式進行了。'],
+      ['搭起小帳篷', 'Ray 和 Tracy 和家人一起用毯子搭成一座小小的閱讀小屋。大家準備好故事書，開心地坐在裡面。'],
+      ['雨聲樂隊', '兩人聽著窗外的雨聲，輕輕用手拍出不同節奏。他們猜猜看，哪一種聲音最像小鼓。'],
+      ['尋找雨天顏色', '雨慢慢停了。Ray 和 Tracy 在大人陪伴下從窗邊找找看天空中的彩虹顏色。'],
+      ['最棒的雨天', 'Ray 和 Tracy 把今天的雨天冒險畫成一張圖。他們發現，就算改變原來的計畫，也能創造出快樂又有趣的一天。'],
+    ],
+  }),
+  makeClassicStory({
+    id: 'classic-ray-tracy-find-the-stars', title: 'Ray & Tracy 尋找星星',
+    characters: [
+      'Ray（8 歲亞洲男孩，黑色短髮、整齊瀏海，不戴眼鏡、不戴帽子）',
+      'Tracy（3 歲亞洲女孩，黑色雙馬尾、整齊瀏海）',
+    ],
+    setting: '夜晚的房間與星空', theme: '好奇、陪伴與睡前安心', categories: ['睡前故事', '冒險故事', '溫馨故事'],
+    scenes: [
+      ['少了一顆星星', '睡前時，Tracy 發現窗外好像少了一顆熟悉的星星。原來，一大片雲朵正好把星星遮住了。'],
+      ['星星觀察卡', 'Ray 拿出紙和筆，和 Tracy 一起做一張星星觀察卡。他們記下看見的星星形狀與位置。'],
+      ['雲朵慢慢走', '兩人在房間裡安靜等待雲朵飄開。家人告訴他們，雲朵會暫時遮住星光，但星星並沒有消失。'],
+      ['星星回來了', '過了一會兒，雲朵慢慢散開，那顆熟悉的星星又出現在天空中。原來它一直都在，只是暫時被雲遮住了。'],
+      ['帶著星光入睡', 'Ray 和 Tracy 互道晚安，把星星觀察卡放在床邊。兩人帶著安心的心情，慢慢進入甜甜的夢鄉。'],
     ],
   }),
 ];
