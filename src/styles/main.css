@@ -9,6 +9,8 @@
 @media(max-width:360px){.hero{padding-left:18px;padding-right:18px}.home-brand{gap:10px}.home-brand .avatar{width:54px;height:54px}.home-brand h1{font-size:27px}.home-brand p{font-size:14px}.theme-card{gap:9px;padding:12px 11px}.theme-card>span{font-size:22px}.theme-card strong{font-size:14px}.section-block,.page-shell{padding-left:18px;padding-right:18px}}
 
 @media(max-width:760px){.reader-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.reader-controls>[data-scene="prev"]{grid-column:1;grid-row:2}.reader-controls>[data-scene="next"]{grid-column:2;grid-row:2}.reader-controls .scene-dots{grid-column:1/-1;grid-row:1;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%}.reader-controls .scene-dot,.reader-controls .scene-dot.active{width:24px;height:24px;flex:0 0 24px;display:grid;place-items:center;position:relative;background:transparent}.reader-controls .scene-dot::before{content:'';width:8px;height:8px;border-radius:50%;background:#ded9ce}.reader-controls .scene-dot.active::before{width:20px;border-radius:8px;background:var(--coral)}}
+.reader-progress{display:grid;gap:9px;margin:0 0 22px;max-width:590px}.reader-progress-label{font-size:13px;font-weight:600;color:#847b69;letter-spacing:.02em}.reader-progress-track{height:8px;overflow:hidden;border-radius:999px;background:#eee9df}.reader-progress-value{display:block;height:100%;border-radius:inherit;background:var(--coral);transition:width .2s ease}
+.reader-narration-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.reader-narration-button,.reader-autoplay-button{min-height:42px;padding:9px 15px;border:1px solid #ded8cc;border-radius:11px;background:#f7f4ed;color:#706a5d;font-size:14px;font-weight:600;transition:background .18s,border-color .18s}.reader-narration-button:hover:not(:disabled),.reader-autoplay-button:hover:not(:disabled){background:#f0ece3;border-color:#cec4b3}.reader-autoplay-button.is-active{border-color:#d6a18d;background:#f8e9e0;color:#985e49}.reader-narration-button:disabled,.reader-autoplay-button:disabled{cursor:not-allowed;opacity:.55}
 
 .story-idea-helper{display:grid;justify-items:start;gap:7px;margin-top:-5px;min-width:0}
 .story-idea-button{min-height:42px;padding:9px 13px;border:1px solid #dfd6c7;border-radius:11px;background:#fbf8f1;color:#716956;font-size:13px;font-weight:600;transition:border-color .18s,background .18s}
@@ -36,4 +38,69 @@
 .story-card-image-status{display:block;width:fit-content;max-width:100%;margin:-5px 0 10px;padding:4px 8px;border-radius:99px;background:#f5f1e8;color:#7f796d;font-size:10px;line-height:1.4;white-space:normal;overflow-wrap:anywhere}.story-card-image-status.status-ready{background:#edf2e9;color:#6f8069}.story-card-image-status.status-failed{background:#f8eeea;color:#a46450}
 .voice-playback-state{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:520px;margin:18px auto 0;padding:9px 12px;border:1px solid #eae4d8;border-radius:10px;background:#fbf8f2;color:#777268;font-size:12px;line-height:1.5}.reader-voice.speaking .voice-playback-state{border-color:#dce7d5;background:#f1f5ed;color:#5d7657}.reader-voice.paused .voice-playback-state{border-color:#eadfc9;background:#f8f3e8;color:#89744e}.reader-voice.error .voice-playback-state{border-color:#ead8d1;background:#f8efeb;color:#a46450}.voice-playback-state span:last-child{text-align:right;white-space:nowrap}
 @media(max-width:360px){.voice-playback-state{gap:6px;padding:8px 9px;font-size:11px}.voice-playback-state span:last-child{white-space:normal}}
+
+/* Reader comfort and touch targets */
+.reader-shell{max-width:1000px;padding:clamp(20px,3.2vw,34px) clamp(16px,3vw,28px) 64px}
+.reader-card{padding:clamp(22px,4vw,44px) clamp(18px,5vw,52px)}
+.reader-heading h1{font-size:clamp(29px,4vw,38px);line-height:1.35;overflow-wrap:anywhere}
+.reader-scene-visual{width:100%;max-width:820px;margin:0 auto;min-width:0;overflow:hidden;border-radius:18px;background:#f4f0e7}
+.reader-scene-image{display:block;width:100%;max-width:100%;height:auto;object-fit:contain}
+.reader-image-placeholder{width:100%;min-height:clamp(190px,45vw,420px);aspect-ratio:3/2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;background:linear-gradient(145deg,#f4f1e8,#e9eee3);color:#766f60}
+.reader-image-placeholder>span{font-size:clamp(30px,6vw,48px);letter-spacing:.18em}
+.reader-image-placeholder strong{font-family:'Noto Serif TC',serif;font-size:clamp(19px,3.4vw,25px)}
+.reader-image-placeholder small{font-size:14px;line-height:1.7}
+.reader-scene{min-height:0;max-width:680px;padding:clamp(26px,4vw,42px) 0 30px}
+.reader-progress{margin-bottom:clamp(22px,4vw,34px)}
+.reader-progress-label{font-size:15px;line-height:1.5;color:#766e5e}
+.reader-progress-track{height:10px}
+.reader-scene h2{font-size:clamp(25px,3.2vw,31px);line-height:1.45;margin:0 0 16px;overflow-wrap:anywhere}
+.reader-scene p{max-width:34em;margin:0;font-size:clamp(19px,2.15vw,22px);line-height:2.05;letter-spacing:.015em;overflow-wrap:anywhere}
+.reader-narration-actions{gap:12px;margin-top:22px}
+.reader-narration-button,.reader-autoplay-button{min-height:48px;padding:11px 17px;font-size:16px;white-space:normal}
+.reader-autoplay-button.is-active{font-weight:700;box-shadow:0 0 0 2px #f8e9e0}
+.reader-controls{gap:14px;margin-top:8px;padding-top:22px}
+.reader-controls .button{min-width:132px;min-height:48px;padding:11px 16px;font-size:16px;white-space:normal}
+.reader-controls .scene-dots{gap:8px}
+.reader-controls .scene-dot,.reader-controls .scene-dot.active{width:36px;height:36px;min-width:36px;min-height:36px;flex-basis:36px}
+.voice-playback-state{font-size:14px;min-height:44px}
+.voice-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:14px auto 0}
+.voice-button{min-width:92px;min-height:46px;padding:10px 14px;border:1px solid #ded8cc;border-radius:11px;background:#f7f4ed;color:#625f55;font-size:15px;font-weight:600}
+.voice-button:hover:not(:disabled){background:#f0ece3;border-color:#cec4b3}
+.voice-rate{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin:14px auto 0}
+.voice-rate small{flex-basis:100%;text-align:center}
+@media(max-width:760px){
+  .reader-shell{width:100%;padding:16px 14px 40px}
+  .reader-card{padding:22px clamp(14px,4vw,22px);border-radius:18px}
+  .reader-top{gap:12px;align-items:flex-start}
+  .reader-top .text-button{min-height:44px;line-height:1.5}
+  .reader-top .favorite-button{min-height:44px;padding:8px 11px}
+  .reader-heading{padding-bottom:18px}
+  .reader-heading h1{font-size:clamp(28px,7vw,34px)}
+  .reader-scene-visual{border-radius:14px}
+  .reader-scene-image{width:100%;height:auto}
+  .reader-image-placeholder{min-height:0}
+  .reader-scene{padding:24px 0 25px}
+  .reader-scene h2{font-size:clamp(24px,6vw,28px);margin-bottom:14px}
+  .reader-scene p{font-size:clamp(18px,5vw,20px);line-height:2;max-width:100%}
+  .reader-narration-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .reader-narration-button,.reader-autoplay-button{width:100%;min-width:0;min-height:50px;padding:10px 8px;font-size:15px;line-height:1.35}
+  .reader-controls{gap:10px;padding-top:18px}
+  .reader-controls .button{width:100%;min-width:0;min-height:50px;padding:10px 7px;font-size:15px;line-height:1.35}
+  .reader-controls .scene-dots{gap:4px}
+  .reader-controls .scene-dot,.reader-controls .scene-dot.active{width:36px;height:36px;flex-basis:36px}
+  .voice-playback-state{align-items:flex-start;font-size:13px}
+  .voice-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:9px}
+  .voice-button{width:100%;min-width:0;min-height:48px;padding:9px 8px;font-size:15px}
+}
+@media(max-width:390px){
+  .reader-shell{padding-inline:10px}
+  .reader-card{padding-inline:13px}
+  .reader-top{flex-wrap:wrap}
+  .reader-top .text-button{font-size:13px}
+  .reader-top .favorite-button{font-size:13px}
+  .reader-progress-label{font-size:14px}
+  .reader-controls{column-gap:8px}
+  .reader-controls .scene-dots{column-gap:2px}
+  .reader-controls .scene-dot,.reader-controls .scene-dot.active{width:36px;height:36px;flex-basis:36px}
+}
 .story-card-art.ai-story-art{position:relative;overflow:hidden}.story-card-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}

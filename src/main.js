@@ -16,6 +16,8 @@ let libraryFilter = 'all';
 let activeReaderStoryId = null;
 let voiceState = 'idle';
 let voiceAutoPlayback = false;
+let isStoryAutoPlaying = false;
+let storyAutoPlaySessionId = 0;
 let voiceMessage = '';
 let voiceRate = 0.9;
 let readerNotice = '';
@@ -31,7 +33,20 @@ let storyCardImageUrls = new Set();
 let storyCardImageRenderId = 0;
 const imageTestMode = import.meta.env.DEV && new URLSearchParams(location.search).get('imageTest') === '1';
 
-function playCurrentScene({ automatic = false } = {}) {
+function cancelStoryAutoPlayback() {
+  isStoryAutoPlaying = false;
+  storyAutoPlaySessionId += 1;
+}
+
+function stopReaderSpeech() {
+  cancelStoryAutoPlayback();
+  stop();
+  voiceState = 'idle';
+  voiceAutoPlayback = false;
+  voiceMessage = '';
+}
+
+function playCurrentScene({ automatic = false, advanceOnEnd = true, autoPlaySessionId = null } = {}) {
   const storyId = currentStory?.id;
   const playedSceneIndex = sceneIndex;
   const scene = currentStory?.scenes?.[playedSceneIndex];
@@ -39,21 +54,23 @@ function playCurrentScene({ automatic = false } = {}) {
   const isCurrentPlayback = () => currentStory?.id === storyId
     && sceneIndex === playedSceneIndex
     && activeReaderStoryId === storyId
-    && location.hash === `#reader/${encodeURIComponent(storyId)}`;
+    && location.hash === `#reader/${encodeURIComponent(storyId)}`
+    && (autoPlaySessionId === null || (isStoryAutoPlaying && autoPlaySessionId === storyAutoPlaySessionId));
 
   try {
     const voice = playScene(scene, {
       rate: voiceRate,
       onEnd: () => {
         if (!isCurrentPlayback()) return;
-        if (playedSceneIndex < currentStory.scenes.length - 1) {
+        if (advanceOnEnd && playedSceneIndex < currentStory.scenes.length - 1) {
           sceneIndex = playedSceneIndex + 1;
           voiceState = 'idle';
           voiceMessage = '';
           render();
-          playCurrentScene({ automatic: true });
+          playCurrentScene({ automatic: true, autoPlaySessionId });
           return;
         }
+        if (autoPlaySessionId !== null) cancelStoryAutoPlayback();
         voiceState = 'idle';
         voiceAutoPlayback = false;
         voiceMessage = '故事朗讀完成。';
@@ -61,6 +78,7 @@ function playCurrentScene({ automatic = false } = {}) {
       },
       onError: (error) => {
         if (!isCurrentPlayback()) return;
+        if (autoPlaySessionId !== null) cancelStoryAutoPlayback();
         voiceState = 'error';
         voiceAutoPlayback = false;
         voiceMessage = error.message;
@@ -70,11 +88,23 @@ function playCurrentScene({ automatic = false } = {}) {
     voiceState = 'speaking';
     voiceMessage = `正在朗讀（${voice.voiceDescription}）。`;
   } catch (error) {
+    if (autoPlaySessionId !== null) cancelStoryAutoPlayback();
     voiceState = 'error';
     voiceAutoPlayback = false;
     voiceMessage = error.message || '語音播放失敗，請稍後再試。';
   }
   render();
+}
+
+function startStoryAutoPlayback() {
+  if (!isSpeechSynthesisSupported() || isStoryAutoPlaying || !currentStory?.scenes?.length) return;
+  stop();
+  voiceState = 'idle';
+  voiceAutoPlayback = false;
+  voiceMessage = '';
+  isStoryAutoPlaying = true;
+  const sessionId = ++storyAutoPlaySessionId;
+  playCurrentScene({ automatic: true, autoPlaySessionId: sessionId });
 }
 
 function revokeReaderCoverImageUrl() {
@@ -407,6 +437,9 @@ function minePage() {
 function readerPage() {
   if (!currentStory) return `<main class="page-shell"><div class="empty-state"><span>📚</span><h2>先從書架選一本故事吧</h2><button class="button button-secondary" data-page="library">前往故事書架</button></div></main>`;
   const scene = currentStory.scenes[sceneIndex];
+  const sceneCount = Math.max(1, currentStory.scenes.length);
+  const currentSceneNumber = sceneIndex + 1;
+  const sceneProgress = Math.round((currentSceneNumber / sceneCount) * 1000) / 10;
   const isAiStory = currentStory.type === 'ai';
   const { imageStatus: aiImageStatus } = isAiStory
     ? getStoryImageState(currentStory)
@@ -452,7 +485,7 @@ function readerPage() {
   const imageTestControl = imageTestMode && isAiStory
     ? `<div class="image-test-tools"><button class="text-button" data-image-test ${imageTestBusy ? 'disabled' : ''}>🧪 測試本機插畫流程</button><small class="image-test-status" aria-live="polite">只使用專案內的測試圖片，不會呼叫圖片 API。</small></div>`
     : '';
-  return `<main class="reader-shell"><div class="reader-top"><button class="text-button" data-page="library">← 回到故事書架</button><button class="favorite-button ${currentStory.favorite ? 'is-favorite' : ''}" data-favorite="${currentStory.id}">${currentStory.favorite ? '★ 已收藏' : '☆ 收藏故事'}</button></div><article class="reader-card"><div class="reader-heading"><span class="eyebrow">${currentStory.type === 'classic' ? '經典故事' : 'AI 故事'}</span><h1>${escapeHtml(currentStory.title)}</h1>${durationSummary}${storyteller(true)}</div>${readerNotice ? `<p class="form-note" data-state="error" role="status">${escapeHtml(readerNotice)}</p>` : ''}${sceneImage}${imageGenerationControl}${imageTestControl}<div class="reader-scene"><div class="scene-number">SCENE ${String(sceneIndex + 1).padStart(2, '0')} / ${String(currentStory.scenes.length).padStart(2, '0')}</div><h2>${escapeHtml(scene.title)}</h2><p>${escapeHtml(scene.text)}</p></div><div class="reader-controls"><button class="button button-secondary" data-scene="prev" ${sceneIndex === 0 ? 'disabled' : ''}>← 上一幕</button><div class="scene-dots">${currentStory.scenes.map((_, i) => `<button aria-label="第 ${i + 1} 幕" class="scene-dot ${i === sceneIndex ? 'active' : ''}" data-scene-index="${i}"></button>`).join('')}</div><button class="button button-secondary" data-scene="next" ${sceneIndex === currentStory.scenes.length - 1 ? 'disabled' : ''}>下一幕 →</button></div><section class="reader-voice ${voiceState}" aria-label="故事語音控制"><div class="reader-voice-heading">${storyteller(true)}<div class="reader-voice-info"><strong>本幕語音朗讀</strong><span class="voice-status" aria-live="polite">${escapeHtml(status)}</span></div></div><div class="voice-playback-state" aria-live="polite"><span>${playbackLabel}</span><span>第 ${sceneIndex + 1} 幕／共 ${currentStory.scenes.length} 幕</span></div><div class="voice-actions"><button class="voice-button" data-voice="play" ${!supported ? 'disabled' : ''}>▶ 播放</button><button class="voice-button" data-voice="pause" ${!supported || voiceState !== 'speaking' ? 'disabled' : ''}>⏸ 暫停</button><button class="voice-button" data-voice="resume" ${!supported || voiceState !== 'paused' ? 'disabled' : ''}>▶ 繼續</button><button class="voice-button" data-voice="stop" ${!supported || voiceState === 'idle' ? 'disabled' : ''}>■ 停止</button></div><div class="voice-rate" aria-label="語速選擇"><span>語速</span>${[[0.75, '慢'], [0.9, '正常'], [1.05, '快']].map(([rate, label]) => `<button class="voice-rate-button" data-rate="${rate}" aria-pressed="${voiceRate === rate}" ${!supported ? 'disabled' : ''}>${label}</button>`).join('')}<small>${escapeHtml(getVoiceDescription())} · 速度套用於下次播放</small></div></section></article></main>`;
+  return `<main class="reader-shell"><div class="reader-top"><button class="text-button" data-page="library">← 回到故事書架</button><button class="favorite-button ${currentStory.favorite ? 'is-favorite' : ''}" data-favorite="${currentStory.id}">${currentStory.favorite ? '★ 已收藏' : '☆ 收藏故事'}</button></div><article class="reader-card"><div class="reader-heading"><span class="eyebrow">${currentStory.type === 'classic' ? '經典故事' : 'AI 故事'}</span><h1>${escapeHtml(currentStory.title)}</h1>${durationSummary}${storyteller(true)}</div>${readerNotice ? `<p class="form-note" data-state="error" role="status">${escapeHtml(readerNotice)}</p>` : ''}${sceneImage}${imageGenerationControl}${imageTestControl}<div class="reader-scene"><div class="reader-progress"><span class="reader-progress-label">第 ${currentSceneNumber} 幕 / ${sceneCount} 幕</span><div class="reader-progress-track" role="progressbar" aria-label="閱讀進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${sceneProgress}"><span class="reader-progress-value" style="width:${sceneProgress}%"></span></div></div><h2>${escapeHtml(scene.title)}</h2><p>${escapeHtml(scene.text)}</p><div class="reader-narration-actions"><button class="reader-narration-button" data-narration type="button" ${!supported || isStoryAutoPlaying ? 'disabled' : ''}>${voiceState === 'speaking' || voiceState === 'paused' ? '⏹ 停止朗讀' : '🔊 朗讀'}</button><button class="reader-autoplay-button ${isStoryAutoPlaying ? 'is-active' : ''}" data-story-autoplay type="button" ${!supported ? 'disabled title="這個瀏覽器不支援語音朗讀"' : ''}>${isStoryAutoPlaying ? '⏹ 停止自動播放' : '▶ 自動播放'}</button></div></div><div class="reader-controls"><button class="button button-secondary" data-scene="prev" ${sceneIndex === 0 ? 'disabled' : ''}>← 上一幕</button><div class="scene-dots">${currentStory.scenes.map((_, i) => `<button aria-label="第 ${i + 1} 幕" class="scene-dot ${i === sceneIndex ? 'active' : ''}" data-scene-index="${i}"></button>`).join('')}</div><button class="button button-secondary" data-scene="next" ${sceneIndex === currentStory.scenes.length - 1 ? 'disabled' : ''}>下一幕 →</button></div><section class="reader-voice ${voiceState}" aria-label="故事語音控制"><div class="reader-voice-heading">${storyteller(true)}<div class="reader-voice-info"><strong>本幕語音朗讀</strong><span class="voice-status" aria-live="polite">${escapeHtml(status)}</span></div></div><div class="voice-playback-state" aria-live="polite"><span>${playbackLabel}</span><span>第 ${sceneIndex + 1} 幕／共 ${currentStory.scenes.length} 幕</span></div><div class="voice-actions"><button class="voice-button" data-voice="play" ${!supported || isStoryAutoPlaying ? 'disabled' : ''}>▶ 播放</button><button class="voice-button" data-voice="pause" ${!supported || voiceState !== 'speaking' ? 'disabled' : ''}>⏸ 暫停</button><button class="voice-button" data-voice="resume" ${!supported || voiceState !== 'paused' ? 'disabled' : ''}>▶ 繼續</button><button class="voice-button" data-voice="stop" ${!supported || voiceState === 'idle' ? 'disabled' : ''}>■ 停止</button></div><div class="voice-rate" aria-label="語速選擇"><span>語速</span>${[[0.75, '慢'], [0.9, '正常'], [1.05, '快']].map(([rate, label]) => `<button class="voice-rate-button" data-rate="${rate}" aria-pressed="${voiceRate === rate}" ${!supported ? 'disabled' : ''}>${label}</button>`).join('')}<small>${escapeHtml(getVoiceDescription())} · 速度套用於下次播放</small></div></section></article></main>`;
 }
 function render() {
   revokeStoryCardImageUrls();
@@ -461,6 +494,7 @@ function render() {
   if (page.startsWith('reader/')) {
     nextReaderStoryId = decodeURIComponent(page.slice('reader/'.length));
     if (activeReaderStoryId !== nextReaderStoryId) {
+      cancelStoryAutoPlayback();
       stop();
       voiceState = 'idle';
       voiceAutoPlayback = false;
@@ -477,6 +511,7 @@ function render() {
     currentStory = structuredClone(storyForReader);
     page = 'reader';
   } else if (activeReaderStoryId !== null) {
+    cancelStoryAutoPlayback();
     stop();
     voiceState = 'idle';
     voiceAutoPlayback = false;
@@ -504,10 +539,10 @@ function render() {
   document.querySelectorAll('.main-nav a').forEach((link) => link.classList.toggle('current', link.dataset.page === page));
 }
 window.addEventListener('pagehide', revokeStoryCardImageUrls);
-function openStory(story, notice = '') { stop(); voiceState = 'idle'; voiceAutoPlayback = false; voiceMessage = ''; if (currentStory?.id !== story.id) imageRequestMessage = ''; currentStory = structuredClone(story); readerNotice = notice; sceneIndex = 0; location.hash = `reader/${encodeURIComponent(story.id)}`; render(); }
+function openStory(story, notice = '') { cancelStoryAutoPlayback(); stop(); voiceState = 'idle'; voiceAutoPlayback = false; voiceMessage = ''; if (currentStory?.id !== story.id) imageRequestMessage = ''; currentStory = structuredClone(story); readerNotice = notice; sceneIndex = 0; location.hash = `reader/${encodeURIComponent(story.id)}`; render(); }
 
 document.addEventListener('click', (event) => {
-  const target = event.target.closest('[data-page], [data-category], [data-read], [data-delete], [data-filter], [data-favorite], [data-scene], [data-scene-index], [data-voice], [data-rate], [data-character-choice], [data-character-custom], [data-story-idea], [data-image-test], [data-generate-story-image], .menu-toggle');
+  const target = event.target.closest('[data-page], [data-category], [data-read], [data-delete], [data-filter], [data-favorite], [data-scene], [data-scene-index], [data-voice], [data-narration], [data-story-autoplay], [data-rate], [data-character-choice], [data-character-custom], [data-story-idea], [data-image-test], [data-generate-story-image], .menu-toggle');
   if (!target) return;
   if (target.classList.contains('menu-toggle')) {
     const nav = document.querySelector('.main-nav'); const open = nav.classList.toggle('open'); target.setAttribute('aria-expanded', String(open)); return;
@@ -566,6 +601,26 @@ document.addEventListener('click', (event) => {
     void runStoryImageGeneration(currentStory);
     return;
   }
+  if (target.hasAttribute('data-narration')) {
+    if (!isSpeechSynthesisSupported()) return;
+    if (voiceState === 'speaking' || voiceState === 'paused') {
+      stopReaderSpeech();
+      render();
+    } else {
+      playCurrentScene({ advanceOnEnd: false });
+    }
+    return;
+  }
+  if (target.hasAttribute('data-story-autoplay')) {
+    if (!isSpeechSynthesisSupported()) return;
+    if (isStoryAutoPlaying) {
+      stopReaderSpeech();
+      render();
+    } else {
+      startStoryAutoPlayback();
+    }
+    return;
+  }
   if (target.dataset.page) { if (target.dataset.page === 'library') libraryFilter = 'all'; location.hash = target.dataset.page; if (location.hash === `#${target.dataset.page}`) render(); return; }
   if (target.dataset.category) { libraryFilter = target.dataset.category; location.hash = 'library'; if (location.hash === '#library') render(); return; }
   if (target.dataset.read) {
@@ -576,6 +631,7 @@ document.addEventListener('click', (event) => {
   if (target.dataset.filter) { libraryFilter = target.dataset.filter; render(); return; }
   if (target.dataset.voice) {
     if (target.dataset.voice === 'play') {
+      if (isStoryAutoPlaying) return;
       playCurrentScene();
       return;
     }
@@ -589,10 +645,7 @@ document.addEventListener('click', (event) => {
       render();
       return;
     }
-    stop();
-    voiceState = 'idle';
-    voiceAutoPlayback = false;
-    voiceMessage = '';
+    stopReaderSpeech();
     render();
     return;
   }
@@ -605,8 +658,8 @@ document.addEventListener('click', (event) => {
     const [updated] = toggleFavorite(target.dataset.favorite, currentStory).filter((story) => story.id === target.dataset.favorite);
     if (updated && currentStory) currentStory = updated; render(); return;
   }
-  if (target.dataset.sceneIndex !== undefined) { stop(); voiceState = 'idle'; voiceAutoPlayback = false; voiceMessage = ''; sceneIndex = Number(target.dataset.sceneIndex); render(); return; }
-  if (target.dataset.scene) { stop(); voiceState = 'idle'; voiceAutoPlayback = false; voiceMessage = ''; sceneIndex = Math.max(0, Math.min(currentStory.scenes.length - 1, sceneIndex + (target.dataset.scene === 'next' ? 1 : -1))); render(); }
+  if (target.dataset.sceneIndex !== undefined) { stopReaderSpeech(); sceneIndex = Number(target.dataset.sceneIndex); render(); return; }
+  if (target.dataset.scene) { stopReaderSpeech(); sceneIndex = Math.max(0, Math.min(currentStory.scenes.length - 1, sceneIndex + (target.dataset.scene === 'next' ? 1 : -1))); render(); }
 });
 
 document.addEventListener('input', (event) => {
@@ -742,6 +795,7 @@ document.addEventListener('submit', async (event) => {
 });
 window.addEventListener('hashchange', render);
 window.addEventListener('pagehide', () => {
+  cancelStoryAutoPlayback();
   stop();
   revokeReaderCoverImageUrl();
 });

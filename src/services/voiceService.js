@@ -23,7 +23,25 @@ function getChineseVoice() {
     .sort((a, b) => score(b) - score(a))[0] || null;
 }
 
-export function getVoiceDescription() {
+function getEnglishVoice() {
+  if (!isSpeechSynthesisSupported()) return null;
+  const voices = window.speechSynthesis.getVoices();
+  return voices.find((voice) => voice.lang.toLowerCase().replaceAll('_', '-').startsWith('en-us'))
+    || voices.find((voice) => voice.lang.toLowerCase().startsWith('en-'))
+    || null;
+}
+
+function isPrimarilyEnglish(text) {
+  const latinCount = (text.match(/[A-Za-z]/g) || []).length;
+  const cjkCount = (text.match(/[\u3400-\u9fff]/g) || []).length;
+  return latinCount > cjkCount;
+}
+
+export function getVoiceDescription(text = '') {
+  if (isPrimarilyEnglish(text)) {
+    const voice = getEnglishVoice();
+    return voice ? '英文語音' : '英文系統語音';
+  }
   const voice = getChineseVoice();
   if (!voice) return '使用系統預設語音';
   const lang = voice.lang.toLowerCase().replaceAll('_', '-');
@@ -41,8 +59,9 @@ export function playScene(scene, { rate = 0.9, onEnd, onError } = {}) {
   stop();
   const token = activeToken;
   const utterance = new window.SpeechSynthesisUtterance(scene.text);
-  const voice = getChineseVoice();
-  utterance.lang = voice?.lang || 'zh-TW';
+  const primarilyEnglish = isPrimarilyEnglish(scene.text);
+  const voice = primarilyEnglish ? getEnglishVoice() : getChineseVoice();
+  utterance.lang = voice?.lang || (primarilyEnglish ? 'en-US' : 'zh-TW');
   if (voice) utterance.voice = voice;
   utterance.rate = Math.min(1.1, Math.max(0.7, Number(rate) || 0.9));
   utterance.onend = () => {
@@ -58,7 +77,7 @@ export function playScene(scene, { rate = 0.9, onEnd, onError } = {}) {
 
   activeUtterance = utterance;
   window.speechSynthesis.speak(utterance);
-  return { voice: voice?.name || null, voiceDescription: getVoiceDescription() };
+  return { voice: voice?.name || null, voiceDescription: getVoiceDescription(scene.text) };
 }
 
 export function pause() {
