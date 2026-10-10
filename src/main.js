@@ -467,9 +467,14 @@ function render() {
       voiceMessage = '';
       readerCoverImageUnavailableStoryId = null;
     }
-    const savedStory = [...getStories(), ...classicStories].find((story) => story.id === nextReaderStoryId);
+    const savedStories = getStories();
+    const savedStory = savedStories.find((story) => story.id === nextReaderStoryId);
+    const officialClassicStory = classicStories.find((story) => story.id === nextReaderStoryId);
     const memoryStory = currentStory?.id === nextReaderStoryId ? currentStory : null;
-    currentStory = structuredClone(savedStory || memoryStory || null);
+    const storyForReader = officialClassicStory
+      ? { ...officialClassicStory, favorite: savedStory?.favorite ?? officialClassicStory.favorite }
+      : savedStory || memoryStory || null;
+    currentStory = structuredClone(storyForReader);
     page = 'reader';
   } else if (activeReaderStoryId !== null) {
     stop();
