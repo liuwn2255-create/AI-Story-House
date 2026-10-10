@@ -4,6 +4,135 @@ import littleRedScene3 from '../assets/stories/little-red-riding-hood/scene-03.w
 import littleRedScene4 from '../assets/stories/little-red-riding-hood/scene-04.webp';
 import littleRedScene5 from '../assets/stories/little-red-riding-hood/scene-05.webp';
 import littleRedScene6 from '../assets/stories/little-red-riding-hood/scene-06.webp';
+import littleStarScene1 from '../assets/classic-stories/star-home/scene-1.webp';
+import littleStarScene2 from '../assets/classic-stories/star-home/scene-2.webp';
+import littleStarScene3 from '../assets/classic-stories/star-home/scene-3.webp';
+import littleStarScene4 from '../assets/classic-stories/star-home/scene-4.webp';
+import littleStarScene5 from '../assets/classic-stories/star-home/scene-5.webp';
+import littleStarScene6 from '../assets/classic-stories/star-home/scene-6.webp';
+import threeLittlePigsScene1 from '../assets/classic-stories/three-little-pigs/scene-1.webp';
+import threeLittlePigsScene2 from '../assets/classic-stories/three-little-pigs/scene-2.webp';
+import threeLittlePigsScene3 from '../assets/classic-stories/three-little-pigs/scene-3.webp';
+import threeLittlePigsScene4 from '../assets/classic-stories/three-little-pigs/scene-4.webp';
+import threeLittlePigsScene5 from '../assets/classic-stories/three-little-pigs/scene-5.webp';
+import threeLittlePigsScene6 from '../assets/classic-stories/three-little-pigs/scene-6.webp';
+import snowWhiteScene1 from '../assets/classic-stories/snow-white/scene-1.webp';
+import snowWhiteScene2 from '../assets/classic-stories/snow-white/scene-2.webp';
+import snowWhiteScene3 from '../assets/classic-stories/snow-white/scene-3.webp';
+import snowWhiteScene4 from '../assets/classic-stories/snow-white/scene-4.webp';
+import snowWhiteScene5 from '../assets/classic-stories/snow-white/scene-5.webp';
+import snowWhiteScene6 from '../assets/classic-stories/snow-white/scene-6.webp';
+import tortoiseHareScene1 from '../assets/classic-stories/tortoise-and-hare/scene-1.webp';
+import tortoiseHareScene2 from '../assets/classic-stories/tortoise-and-hare/scene-2.webp';
+import tortoiseHareScene3 from '../assets/classic-stories/tortoise-and-hare/scene-3.webp';
+import tortoiseHareScene4 from '../assets/classic-stories/tortoise-and-hare/scene-4.webp';
+import tortoiseHareScene5 from '../assets/classic-stories/tortoise-and-hare/scene-5.webp';
+import tortoiseHareScene6 from '../assets/classic-stories/tortoise-and-hare/scene-6.webp';
+import uglyDucklingScene1 from '../assets/classic-stories/ugly-duckling/scene-1.webp';
+import uglyDucklingScene2 from '../assets/classic-stories/ugly-duckling/scene-2.webp';
+import uglyDucklingScene3 from '../assets/classic-stories/ugly-duckling/scene-3.webp';
+import uglyDucklingScene4 from '../assets/classic-stories/ugly-duckling/scene-4.webp';
+import uglyDucklingScene5 from '../assets/classic-stories/ugly-duckling/scene-5.webp';
+import uglyDucklingScene6 from '../assets/classic-stories/ugly-duckling/scene-6.webp';
+import jackBeanstalkScene1 from '../assets/classic-stories/jack-and-the-beanstalk/scene-1.webp';
+import jackBeanstalkScene2 from '../assets/classic-stories/jack-and-the-beanstalk/scene-2.webp';
+import jackBeanstalkScene3 from '../assets/classic-stories/jack-and-the-beanstalk/scene-3.webp';
+import jackBeanstalkScene4 from '../assets/classic-stories/jack-and-the-beanstalk/scene-4.webp';
+import jackBeanstalkScene5 from '../assets/classic-stories/jack-and-the-beanstalk/scene-5.webp';
+import jackBeanstalkScene6 from '../assets/classic-stories/jack-and-the-beanstalk/scene-6.webp';
+import frogPrinceScene1 from '../assets/classic-stories/frog-prince/scene-1.webp';
+import frogPrinceScene2 from '../assets/classic-stories/frog-prince/scene-2.webp';
+import frogPrinceScene3 from '../assets/classic-stories/frog-prince/scene-3.webp';
+import frogPrinceScene4 from '../assets/classic-stories/frog-prince/scene-4.webp';
+import frogPrinceScene5 from '../assets/classic-stories/frog-prince/scene-5.webp';
+import frogPrinceScene6 from '../assets/classic-stories/frog-prince/scene-6.webp';
+import cinderellaScene1 from '../assets/classic-stories/cinderella/scene-1.webp';
+import cinderellaScene2 from '../assets/classic-stories/cinderella/scene-2.webp';
+import cinderellaScene3 from '../assets/classic-stories/cinderella/scene-3.webp';
+import cinderellaScene4 from '../assets/classic-stories/cinderella/scene-4.webp';
+import cinderellaScene5 from '../assets/classic-stories/cinderella/scene-5.webp';
+import cinderellaScene6 from '../assets/classic-stories/cinderella/scene-6.webp';
+import sleepingBeautyScene1 from '../assets/classic-stories/sleeping-beauty/scene-1.webp';
+import sleepingBeautyScene2 from '../assets/classic-stories/sleeping-beauty/scene-2.webp';
+import sleepingBeautyScene3 from '../assets/classic-stories/sleeping-beauty/scene-3.webp';
+import sleepingBeautyScene4 from '../assets/classic-stories/sleeping-beauty/scene-4.webp';
+import sleepingBeautyScene5 from '../assets/classic-stories/sleeping-beauty/scene-5.webp';
+import sleepingBeautyScene6 from '../assets/classic-stories/sleeping-beauty/scene-6.webp';
+import pinocchioScene1 from '../assets/classic-stories/pinocchio/scene-1.webp';
+import pinocchioScene2 from '../assets/classic-stories/pinocchio/scene-2.webp';
+import pinocchioScene3 from '../assets/classic-stories/pinocchio/scene-3.webp';
+import pinocchioScene4 from '../assets/classic-stories/pinocchio/scene-4.webp';
+import pinocchioScene5 from '../assets/classic-stories/pinocchio/scene-5.webp';
+import pinocchioScene6 from '../assets/classic-stories/pinocchio/scene-6.webp';
+import emperorsNewClothesScene1 from '../assets/classic-stories/emperors-new-clothes/scene-1.webp';
+import emperorsNewClothesScene2 from '../assets/classic-stories/emperors-new-clothes/scene-2.webp';
+import emperorsNewClothesScene3 from '../assets/classic-stories/emperors-new-clothes/scene-3.webp';
+import emperorsNewClothesScene4 from '../assets/classic-stories/emperors-new-clothes/scene-4.webp';
+import emperorsNewClothesScene5 from '../assets/classic-stories/emperors-new-clothes/scene-5.webp';
+import emperorsNewClothesScene6 from '../assets/classic-stories/emperors-new-clothes/scene-6.webp';
+import goldenAxeScene1 from '../assets/classic-stories/golden-axe/scene-1.webp';
+import goldenAxeScene2 from '../assets/classic-stories/golden-axe/scene-2.webp';
+import goldenAxeScene3 from '../assets/classic-stories/golden-axe/scene-3.webp';
+import goldenAxeScene4 from '../assets/classic-stories/golden-axe/scene-4.webp';
+import goldenAxeScene5 from '../assets/classic-stories/golden-axe/scene-5.webp';
+import goldenAxeScene6 from '../assets/classic-stories/golden-axe/scene-6.webp';
+import boyWhoCriedWolfScene1 from '../assets/classic-stories/boy-who-cried-wolf/scene-1.webp';
+import boyWhoCriedWolfScene2 from '../assets/classic-stories/boy-who-cried-wolf/scene-2.webp';
+import boyWhoCriedWolfScene3 from '../assets/classic-stories/boy-who-cried-wolf/scene-3.webp';
+import boyWhoCriedWolfScene4 from '../assets/classic-stories/boy-who-cried-wolf/scene-4.webp';
+import boyWhoCriedWolfScene5 from '../assets/classic-stories/boy-who-cried-wolf/scene-5.webp';
+import boyWhoCriedWolfScene6 from '../assets/classic-stories/boy-who-cried-wolf/scene-6.webp';
+import northWindSunScene1 from '../assets/classic-stories/north-wind-and-sun/scene-1.webp';
+import northWindSunScene2 from '../assets/classic-stories/north-wind-and-sun/scene-2.webp';
+import northWindSunScene3 from '../assets/classic-stories/north-wind-and-sun/scene-3.webp';
+import northWindSunScene4 from '../assets/classic-stories/north-wind-and-sun/scene-4.webp';
+import northWindSunScene5 from '../assets/classic-stories/north-wind-and-sun/scene-5.webp';
+import northWindSunScene6 from '../assets/classic-stories/north-wind-and-sun/scene-6.webp';
+import antAndCricketScene1 from '../assets/classic-stories/ant-and-cricket/scene-1.webp';
+import antAndCricketScene2 from '../assets/classic-stories/ant-and-cricket/scene-2.webp';
+import antAndCricketScene3 from '../assets/classic-stories/ant-and-cricket/scene-3.webp';
+import antAndCricketScene4 from '../assets/classic-stories/ant-and-cricket/scene-4.webp';
+import antAndCricketScene5 from '../assets/classic-stories/ant-and-cricket/scene-5.webp';
+import antAndCricketScene6 from '../assets/classic-stories/ant-and-cricket/scene-6.webp';
+import greatTurnipScene1 from '../assets/classic-stories/great-turnip/scene-1.webp';
+import greatTurnipScene2 from '../assets/classic-stories/great-turnip/scene-2.webp';
+import greatTurnipScene3 from '../assets/classic-stories/great-turnip/scene-3.webp';
+import greatTurnipScene4 from '../assets/classic-stories/great-turnip/scene-4.webp';
+import greatTurnipScene5 from '../assets/classic-stories/great-turnip/scene-5.webp';
+import greatTurnipScene6 from '../assets/classic-stories/great-turnip/scene-6.webp';
+import monkeyKingHeavenScene1 from '../assets/classic-stories/monkey-king-heaven/scene-1.webp';
+import monkeyKingHeavenScene2 from '../assets/classic-stories/monkey-king-heaven/scene-2.webp';
+import monkeyKingHeavenScene3 from '../assets/classic-stories/monkey-king-heaven/scene-3.webp';
+import monkeyKingHeavenScene4 from '../assets/classic-stories/monkey-king-heaven/scene-4.webp';
+import monkeyKingHeavenScene5 from '../assets/classic-stories/monkey-king-heaven/scene-5.webp';
+import monkeyKingHeavenScene6 from '../assets/classic-stories/monkey-king-heaven/scene-6.webp';
+import changeMoonScene1 from '../assets/classic-stories/change-moon/scene-1.webp';
+import changeMoonScene2 from '../assets/classic-stories/change-moon/scene-2.webp';
+import changeMoonScene3 from '../assets/classic-stories/change-moon/scene-3.webp';
+import changeMoonScene4 from '../assets/classic-stories/change-moon/scene-4.webp';
+import changeMoonScene5 from '../assets/classic-stories/change-moon/scene-5.webp';
+import changeMoonScene6 from '../assets/classic-stories/change-moon/scene-6.webp';
+import littlePrinceScene1 from '../assets/classic-stories/little-prince/scene-1.webp';
+import littlePrinceScene2 from '../assets/classic-stories/little-prince/scene-2.webp';
+import littlePrinceScene3 from '../assets/classic-stories/little-prince/scene-3.webp';
+import littlePrinceScene4 from '../assets/classic-stories/little-prince/scene-4.webp';
+import littlePrinceScene5 from '../assets/classic-stories/little-prince/scene-5.webp';
+import littlePrinceScene6 from '../assets/classic-stories/little-prince/scene-6.webp';
+import rayTracyForestScene1 from '../assets/classic-stories/ray-tracy-forest-adventure/scene-1.webp';
+import rayTracyForestScene2 from '../assets/classic-stories/ray-tracy-forest-adventure/scene-2.webp';
+import rayTracyForestScene3 from '../assets/classic-stories/ray-tracy-forest-adventure/scene-3.webp';
+import rayTracyForestScene4 from '../assets/classic-stories/ray-tracy-forest-adventure/scene-4.webp';
+import rayTracyForestScene5 from '../assets/classic-stories/ray-tracy-forest-adventure/scene-5.webp';
+import rayTracyRainyDayScene1 from '../assets/classic-stories/ray-tracy-rainy-day-adventure/scene-1.webp';
+import rayTracyRainyDayScene2 from '../assets/classic-stories/ray-tracy-rainy-day-adventure/scene-2.webp';
+import rayTracyRainyDayScene3 from '../assets/classic-stories/ray-tracy-rainy-day-adventure/scene-3.webp';
+import rayTracyRainyDayScene4 from '../assets/classic-stories/ray-tracy-rainy-day-adventure/scene-4.webp';
+import rayTracyRainyDayScene5 from '../assets/classic-stories/ray-tracy-rainy-day-adventure/scene-5.webp';
+import rayTracyFindStarsScene1 from '../assets/classic-stories/ray-tracy-find-the-stars/scene-1.webp';
+import rayTracyFindStarsScene2 from '../assets/classic-stories/ray-tracy-find-the-stars/scene-2.webp';
+import rayTracyFindStarsScene3 from '../assets/classic-stories/ray-tracy-find-the-stars/scene-3.webp';
+import rayTracyFindStarsScene4 from '../assets/classic-stories/ray-tracy-find-the-stars/scene-4.webp';
+import rayTracyFindStarsScene5 from '../assets/classic-stories/ray-tracy-find-the-stars/scene-5.webp';
 import aliBabaScene1 from '../assets/classic-stories/ali-baba/scene-1.webp';
 import aliBabaScene2 from '../assets/classic-stories/ali-baba/scene-2.webp';
 import aliBabaScene3 from '../assets/classic-stories/ali-baba/scene-3.webp';
@@ -37,23 +166,23 @@ export const classicStories = [
     id: 'classic-little-star', title: '小星星的回家路', type: 'classic',
     characters: ['小星星'], setting: '夜空', theme: '勇氣與友誼', categories: ['冒險故事', '勇氣故事', '睡前故事'], favorite: false,
     scenes: [
-      { id: 'star-1', title: '迷路的小星星', text: '夜空裡有一顆小星星，不小心和星星朋友走散了。牠望著遠方，心裡有一點害怕。', image: '', audio: '' },
-      { id: 'star-2', title: '停下來想一想', text: '小星星記得朋友曾說，迷路時先停在安全的地方，再看看周圍的方向。牠找到一片安靜的星雲，讓自己慢慢平靜下來。', image: '', audio: '' },
-      { id: 'star-3', title: '月亮的指引', text: '溫柔的月亮告訴牠：「跟著銀河的方向走，你一定找得到回家的路。」小星星鼓起勇氣，踏上旅程。', image: '', audio: '' },
-      { id: 'star-4', title: '遇見螢火蟲', text: '途中，小星星看見一群螢火蟲在替夜行的小動物照亮小路。牠向牠們問路，螢火蟲便告訴牠銀河在哪個方向。', image: '', audio: '' },
-      { id: 'star-5', title: '熟悉的光芒', text: '小星星沿著銀河慢慢前進，遠遠看見幾點熟悉的光。原來朋友們正在夜空中尋找牠，還排成了回家的箭頭。', image: '', audio: '' },
-      { id: 'star-6', title: '回到朋友身邊', text: '小星星終於回到朋友身邊，大家互相擁抱，也謝謝月亮和螢火蟲的幫忙。從那天起，小星星知道，勇敢求助也是一種力量。', image: '', audio: '' },
+      { id: 'star-1', title: '迷路的小星星', text: '夜空裡有一顆小星星，不小心和星星朋友走散了。牠望著遠方，心裡有一點害怕。', image: littleStarScene1, audio: '' },
+      { id: 'star-2', title: '停下來想一想', text: '小星星記得朋友曾說，迷路時先停在安全的地方，再看看周圍的方向。牠找到一片安靜的星雲，讓自己慢慢平靜下來。', image: littleStarScene2, audio: '' },
+      { id: 'star-3', title: '月亮的指引', text: '溫柔的月亮告訴牠：「跟著銀河的方向走，你一定找得到回家的路。」小星星鼓起勇氣，踏上旅程。', image: littleStarScene3, audio: '' },
+      { id: 'star-4', title: '遇見螢火蟲', text: '途中，小星星看見一群螢火蟲在替夜行的小動物照亮小路。牠向牠們問路，螢火蟲便告訴牠銀河在哪個方向。', image: littleStarScene4, audio: '' },
+      { id: 'star-5', title: '熟悉的光芒', text: '小星星沿著銀河慢慢前進，遠遠看見幾點熟悉的光。原來朋友們正在夜空中尋找牠，還排成了回家的箭頭。', image: littleStarScene5, audio: '' },
+      { id: 'star-6', title: '回到朋友身邊', text: '小星星終於回到朋友身邊，大家互相擁抱，也謝謝月亮和螢火蟲的幫忙。從那天起，小星星知道，勇敢求助也是一種力量。', image: littleStarScene6, audio: '' },
     ], createdAt: null,
   },
   makeClassicStory({
     id: 'classic-three-little-pigs', title: '三隻小豬', characters: ['大豬', '二豬', '小豬', '大野狼'], setting: '森林旁的小村莊', theme: '準備與合作', categories: ['動物故事', '冒險故事', '趣味故事'],
     scenes: [
-      ['離開豬媽媽的家', '三隻小豬長大了，決定各自蓋一間房子。豬媽媽提醒牠們：「做事別急，互相照應最重要。」'],
-      ['稻草小屋', '大豬很快用稻草蓋好小屋，跑去找弟弟玩。二豬也用樹枝搭了房子，只有小豬先畫好圖，再一塊塊砌起磚牆。'],
-      ['大野狼來敲門', '一隻大野狼走到稻草屋前，大聲吹氣，稻草便飛得到處都是。大豬趕緊跑到二豬家，兩兄弟一起躲進屋裡。'],
-      ['一起守住磚屋', '野狼又吹倒樹枝屋，兩隻小豬跑去找小弟。磚屋又穩又暖，三兄弟關好門窗，並沒有被野狼嚇倒。'],
-      ['想出好辦法', '小豬沒有和野狼爭吵，而是隔著門說：「你可以敲門，用說的告訴我們想要什麼。」野狼發現自己只是肚子餓，也有點寂寞。'],
-      ['新朋友與新家', '三兄弟分給野狼一籃蘋果，並邀請牠一起修好小屋。野狼答應先敲門再拜訪，大家也明白：認真準備、彼此合作，遇到困難就更有力量。'],
+      ['離開豬媽媽的家', '三隻小豬長大了，決定各自蓋一間房子。豬媽媽提醒牠們：「做事別急，互相照應最重要。」', threeLittlePigsScene1],
+      ['稻草小屋', '大豬很快用稻草蓋好小屋，跑去找弟弟玩。二豬也用樹枝搭了房子，只有小豬先畫好圖，再一塊塊砌起磚牆。', threeLittlePigsScene2],
+      ['大野狼來敲門', '一隻大野狼走到稻草屋前，大聲吹氣，稻草便飛得到處都是。大豬趕緊跑到二豬家，兩兄弟一起躲進屋裡。', threeLittlePigsScene3],
+      ['一起守住磚屋', '野狼又吹倒樹枝屋，兩隻小豬跑去找小弟。磚屋又穩又暖，三兄弟關好門窗，並沒有被野狼嚇倒。', threeLittlePigsScene4],
+      ['想出好辦法', '小豬沒有和野狼爭吵，而是隔著門說：「你可以敲門，用說的告訴我們想要什麼。」野狼發現自己只是肚子餓，也有點寂寞。', threeLittlePigsScene5],
+      ['新朋友與新家', '三兄弟分給野狼一籃蘋果，並邀請牠一起修好小屋。野狼答應先敲門再拜訪，大家也明白：認真準備、彼此合作，遇到困難就更有力量。', threeLittlePigsScene6],
     ],
   }),
   makeClassicStory({
@@ -70,100 +199,100 @@ export const classicStories = [
   makeClassicStory({
     id: 'classic-tortoise-and-hare', title: '龜兔賽跑', characters: ['烏龜', '兔子'], setting: '森林賽道', theme: '耐心與謙虛', categories: ['動物故事', '勇氣故事', '趣味故事'],
     scenes: [
-      ['兔子的挑戰', '兔子常常笑烏龜走得慢。一天，烏龜平靜地說：「不如比一場，看誰先到山丘的大樹下。」'],
-      ['比賽開始', '狐狸裁判吹響哨子，兔子像箭一樣跑出去。烏龜一步一步往前走，心裡只記得自己的方向。'],
-      ['兔子停下休息', '兔子回頭看見烏龜還很遠，便躺在樹蔭下休息。牠想：「我跑得這麼快，睡一下也來得及。」'],
-      ['烏龜不停步', '烏龜經過兔子時沒有嘲笑牠，只是繼續穩穩地走。路旁的小動物替牠加油，牠也向大家微笑點頭。'],
-      ['兔子醒來了', '兔子睡醒一看，烏龜已接近終點。牠立刻全力奔跑，但烏龜早一步抵達大樹，大家為兩位選手鼓掌。'],
-      ['一起慶祝', '兔子向烏龜道賀，也為自己的自大道歉。烏龜說：「快有快的好處，穩穩前進也有力量。」牠們決定一起練習，往後成了好朋友。'],
+      ['兔子的挑戰', '兔子常常笑烏龜走得慢。一天，烏龜平靜地說：「不如比一場，看誰先到山丘的大樹下。」', tortoiseHareScene1],
+      ['比賽開始', '狐狸裁判吹響哨子，兔子像箭一樣跑出去。烏龜一步一步往前走，心裡只記得自己的方向。', tortoiseHareScene2],
+      ['兔子停下休息', '兔子回頭看見烏龜還很遠，便躺在樹蔭下休息。牠想：「我跑得這麼快，睡一下也來得及。」', tortoiseHareScene3],
+      ['烏龜不停步', '烏龜經過兔子時沒有嘲笑牠，只是繼續穩穩地走。路旁的小動物替牠加油，牠也向大家微笑點頭。', tortoiseHareScene4],
+      ['兔子醒來了', '兔子睡醒一看，烏龜已接近終點。牠立刻全力奔跑，但烏龜早一步抵達大樹，大家為兩位選手鼓掌。', tortoiseHareScene5],
+      ['一起慶祝', '兔子向烏龜道賀，也為自己的自大道歉。烏龜說：「快有快的好處，穩穩前進也有力量。」牠們決定一起練習，往後成了好朋友。', tortoiseHareScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-ugly-duckling', title: '醜小鴨', characters: ['小鴨', '天鵝家族'], setting: '湖畔與蘆葦叢', theme: '接納自己與尊重不同', categories: ['動物故事', '溫馨故事', '勇氣故事'],
     scenes: [
-      ['特別的蛋', '春天的湖邊，鴨媽媽孵出一群小鴨，其中一隻灰灰的大蛋晚了些才孵開。小鴨模樣和兄弟姊妹不一樣，心裡有些不安。'],
-      ['尋找自己的位置', '小鴨努力跟大家一起游水，卻常被笑聲弄得難過。鴨媽媽安慰牠：「每個孩子都有自己的樣子，你值得被好好對待。」'],
-      ['冬天的湖', '天氣轉冷，小鴨沿著湖邊尋找溫暖的地方。牠學會照顧自己，也在善良的老婦人家休息了一晚。'],
-      ['春天來了', '冰雪融化，湖面重新映出藍天。小鴨在水裡看見自己的倒影，發現翅膀變得潔白修長，連自己也認不出來。'],
-      ['遇見天鵝', '幾隻天鵝游近牠，親切地邀請牠一起在湖上散步。小鴨這才知道，自己原來是一隻天鵝，並不是誰口中的「醜小鴨」。'],
-      ['展開新生活', '小天鵝和新朋友在湖面自在地游著。牠沒有忘記曾經孤單的日子，決定以後看見與眾不同的孩子，都先伸出友善的翅膀。'],
+      ['特別的蛋', '春天的湖邊，鴨媽媽孵出一群小鴨，其中一隻灰灰的大蛋晚了些才孵開。小鴨模樣和兄弟姊妹不一樣，心裡有些不安。', uglyDucklingScene1],
+      ['尋找自己的位置', '小鴨努力跟大家一起游水，卻常被笑聲弄得難過。鴨媽媽安慰牠：「每個孩子都有自己的樣子，你值得被好好對待。」', uglyDucklingScene2],
+      ['冬天的湖', '天氣轉冷，小鴨沿著湖邊尋找溫暖的地方。牠學會照顧自己，也在善良的老婦人家休息了一晚。', uglyDucklingScene3],
+      ['春天來了', '冰雪融化，湖面重新映出藍天。小鴨在水裡看見自己的倒影，發現翅膀變得潔白修長，連自己也認不出來。', uglyDucklingScene4],
+      ['遇見天鵝', '幾隻天鵝游近牠，親切地邀請牠一起在湖上散步。小鴨這才知道，自己原來是一隻天鵝，並不是誰口中的「醜小鴨」。', uglyDucklingScene5],
+      ['展開新生活', '小天鵝和新朋友在湖面自在地游著。牠沒有忘記曾經孤單的日子，決定以後看見與眾不同的孩子，都先伸出友善的翅膀。', uglyDucklingScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-jack-and-beanstalk', title: '傑克與魔豆', characters: ['傑克', '巨人', '金色母雞'], setting: '村莊與雲端城堡', theme: '勇氣、誠實與負責', categories: ['冒險故事', '勇氣故事'],
     scenes: [
-      ['家中的困難', '傑克和媽媽住在小村莊，最近家裡的牛沒有奶了。傑克帶牛去市集，希望換些生活用品，卻遇見一位神祕旅人。'],
-      ['一把奇妙的豆子', '旅人用幾顆魔豆交換牛，傑克帶回家後，媽媽有些生氣。夜裡豆子發芽，長成一株高高的藤，直通雲朵上方。'],
-      ['雲上的城堡', '傑克沿著藤蔓走到一座城堡，聽見裡頭有低沉的嘆息聲。城堡主人巨人正在找走失的金色母雞，牠下蛋時會唱出好聽的歌。'],
-      ['幫忙找母雞', '傑克沒有拿走城堡裡的東西，而是詢問巨人能不能一起找。牠們循著細小的歌聲，在花園角落找到正在休息的母雞。'],
-      ['回到家鄉', '傑克和母雞沿著藤蔓回到村莊，巨人也從雲端送來一籃種子作為謝禮。傑克把豆子的事告訴媽媽，並為自己沒有先商量而道歉。'],
-      ['共享豐收', '傑克和媽媽種下種子，收成後和鄰居分享。巨人也常來拜訪，大家一起聽金色母雞唱歌，傑克明白勇敢也要配上誠實和負責。'],
+      ['家中的困難', '傑克和媽媽住在小村莊，最近家裡的牛沒有奶了。傑克帶牛去市集，希望換些生活用品，卻遇見一位神祕旅人。', jackBeanstalkScene1],
+      ['一把奇妙的豆子', '旅人用幾顆魔豆交換牛，傑克帶回家後，媽媽有些生氣。夜裡豆子發芽，長成一株高高的藤，直通雲朵上方。', jackBeanstalkScene2],
+      ['雲上的城堡', '傑克沿著藤蔓走到一座城堡，聽見裡頭有低沉的嘆息聲。城堡主人巨人正在找走失的金色母雞，牠下蛋時會唱出好聽的歌。', jackBeanstalkScene3],
+      ['幫忙找母雞', '傑克沒有拿走城堡裡的東西，而是詢問巨人能不能一起找。牠們循著細小的歌聲，在花園角落找到正在休息的母雞。', jackBeanstalkScene4],
+      ['回到家鄉', '傑克和母雞沿著藤蔓回到村莊，巨人也從雲端送來一籃種子作為謝禮。傑克把豆子的事告訴媽媽，並為自己沒有先商量而道歉。', jackBeanstalkScene5],
+      ['共享豐收', '傑克和媽媽種下種子，收成後和鄰居分享。巨人也常來拜訪，大家一起聽金色母雞唱歌，傑克明白勇敢也要配上誠實和負責。', jackBeanstalkScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-frog-prince', title: '青蛙王子', characters: ['公主', '青蛙王子'], setting: '王宮花園與池塘', theme: '守信與理解彼此', categories: ['動物故事', '冒險故事', '溫馨故事'],
     scenes: [
-      ['池塘邊的金球', '公主最喜歡在花園玩金球。一天，球不小心掉進池塘，她看著水面發愁，不知道該怎麼辦。'],
-      ['青蛙的提議', '一隻青蛙游到岸邊，答應幫忙找球，只希望公主願意和牠做朋友。公主點頭答應，青蛙便潛入水中把金球推回岸邊。'],
-      ['忘記的約定', '公主拿起金球，開心地跑回王宮，差點忘了自己的承諾。晚餐時，青蛙來到門前，提醒她曾答應一起吃飯。'],
-      ['一起用餐', '公主起初有些猶豫，但想起答應過的事，便請青蛙坐在桌邊。她發現青蛙說話有禮貌，也很會聽人分享心事。'],
-      ['王子的故事', '青蛙告訴公主，自己曾是一位王子，被魔法變成青蛙，只有真誠的友誼能解除魔法。公主沒有急著相信，而是先陪他找尋解除魔法的方法。'],
-      ['友誼的魔法', '兩人一起把花園池塘整理乾淨，青蛙王子在月光下恢復原貌。公主知道，真正的魔法是守信、尊重與用心了解一個新朋友。'],
+      ['池塘邊的金球', '公主最喜歡在花園玩金球。一天，球不小心掉進池塘，她看著水面發愁，不知道該怎麼辦。', frogPrinceScene1],
+      ['青蛙的提議', '一隻青蛙游到岸邊，答應幫忙找球，只希望公主願意和牠做朋友。公主點頭答應，青蛙便潛入水中把金球推回岸邊。', frogPrinceScene2],
+      ['忘記的約定', '公主拿起金球，開心地跑回王宮，差點忘了自己的承諾。晚餐時，青蛙來到門前，提醒她曾答應一起吃飯。', frogPrinceScene3],
+      ['一起用餐', '公主起初有些猶豫，但想起答應過的事，便請青蛙坐在桌邊。她發現青蛙說話有禮貌，也很會聽人分享心事。', frogPrinceScene4],
+      ['王子的故事', '青蛙告訴公主，自己曾是一位王子，被魔法變成青蛙，只有真誠的友誼能解除魔法。公主沒有急著相信，而是先陪他找尋解除魔法的方法。', frogPrinceScene5],
+      ['友誼的魔法', '兩人一起把花園池塘整理乾淨，青蛙王子在月光下恢復原貌。公主知道，真正的魔法是守信、尊重與用心了解一個新朋友。', frogPrinceScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-snow-white', title: '白雪公主', characters: ['白雪公主', '七位小矮人', '王后'], setting: '森林小屋', theme: '善良、勇敢與辨別陌生人', categories: ['冒險故事', '勇氣故事', '溫馨故事'],
     scenes: [
-      ['森林裡的新朋友', '白雪公主在森林中迷了路，找到七位小矮人的小屋。小矮人見她疲累，邀請她休息，也提醒她不要隨便替陌生人開門。'],
-      ['小屋的新生活', '白雪公主和小矮人一起打掃、煮湯、照顧花園。她很喜歡這個家，大家也約好出門時互相告知去向。'],
-      ['王后的打扮', '王后聽說白雪公主過得很好，便換上商人的衣服，帶著一籃蘋果來到小屋。她隔著門敲門，白雪公主記得約定，沒有開門。'],
-      ['保持警覺', '王后說蘋果是禮物，白雪公主仍請她把籃子放在門外，並請小矮人回來一起確認。王后見計畫不成，留下蘋果便匆匆離開。'],
-      ['坦白心事', '小矮人回家後，白雪公主把事情說清楚。大家沒有吃陌生人留下的食物，並請村裡的長者一起和王后談談，了解她為何如此生氣。'],
-      ['森林的新約定', '王后承認自己因為嫉妒而做了不好的事，答應不再打擾白雪公主。她學著欣賞別人的長處，白雪公主和小矮人也繼續在森林裡過著安心的生活。'],
+      ['森林裡的新朋友', '白雪公主在森林中迷了路，找到七位小矮人的小屋。小矮人見她疲累，邀請她休息，也提醒她不要隨便替陌生人開門。', snowWhiteScene1],
+      ['小屋的新生活', '白雪公主和小矮人一起打掃、煮湯、照顧花園。她很喜歡這個家，大家也約好出門時互相告知去向。', snowWhiteScene2],
+      ['王后的打扮', '王后聽說白雪公主過得很好，便換上商人的衣服，帶著一籃蘋果來到小屋。她隔著門敲門，白雪公主記得約定，沒有開門。', snowWhiteScene3],
+      ['保持警覺', '王后說蘋果是禮物，白雪公主仍請她把籃子放在門外，並請小矮人回來一起確認。王后見計畫不成，留下蘋果便匆匆離開。', snowWhiteScene4],
+      ['坦白心事', '小矮人回家後，白雪公主把事情說清楚。大家沒有吃陌生人留下的食物，並請村裡的長者一起和王后談談，了解她為何如此生氣。', snowWhiteScene5],
+      ['森林的新約定', '王后承認自己因為嫉妒而做了不好的事，答應不再打擾白雪公主。她學著欣賞別人的長處，白雪公主和小矮人也繼續在森林裡過著安心的生活。', snowWhiteScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-cinderella', title: '灰姑娘', characters: ['灰姑娘', '仙女教母', '王子'], setting: '家中與王宮舞會', theme: '善良、自信與珍惜機會', categories: ['溫馨故事', '勇氣故事'],
     scenes: [
-      ['忙碌的日子', '灰姑娘每天幫忙整理家裡，雖然辛苦，仍會對小動物溫柔說話。她聽說王宮要舉辦舞會，也希望有機會看看盛大的花園。'],
-      ['仙女教母的幫助', '一位仙女教母出現，替灰姑娘準備了漂亮衣裳和馬車。她提醒灰姑娘，魔法會在午夜結束，記得按時回家。'],
-      ['舞會初相遇', '灰姑娘來到舞會，王子邀請她跳舞。兩人聊起喜歡的花和音樂，灰姑娘發現自己也能自在地表達想法。'],
-      ['午夜的鐘聲', '鐘聲響起，灰姑娘向大家道別，匆忙離開時掉了一隻玻璃鞋。她平安回到家，仍然記得舞會裡愉快的談話。'],
-      ['尋找舞伴', '王子帶著玻璃鞋拜訪村裡的人，希望找到那位善談的舞伴。輪到灰姑娘時，鞋子剛好合腳，她也拿出另一隻鞋作證。'],
-      ['新的開始', '王子認出灰姑娘，真誠邀請她再次見面。灰姑娘答應了，但也說希望保有自己的生活與朋友；從此她更相信，勇敢做自己值得被尊重。'],
+      ['忙碌的日子', '灰姑娘每天幫忙整理家裡，雖然辛苦，仍會對小動物溫柔說話。她聽說王宮要舉辦舞會，也希望有機會看看盛大的花園。', cinderellaScene1],
+      ['仙女教母的幫助', '一位仙女教母出現，替灰姑娘準備了漂亮衣裳和馬車。她提醒灰姑娘，魔法會在午夜結束，記得按時回家。', cinderellaScene2],
+      ['舞會初相遇', '灰姑娘來到舞會，王子邀請她跳舞。兩人聊起喜歡的花和音樂，灰姑娘發現自己也能自在地表達想法。', cinderellaScene3],
+      ['午夜的鐘聲', '鐘聲響起，灰姑娘向大家道別，匆忙離開時掉了一隻玻璃鞋。她平安回到家，仍然記得舞會裡愉快的談話。', cinderellaScene4],
+      ['尋找舞伴', '王子帶著玻璃鞋拜訪村裡的人，希望找到那位善談的舞伴。輪到灰姑娘時，鞋子剛好合腳，她也拿出另一隻鞋作證。', cinderellaScene5],
+      ['新的開始', '王子認出灰姑娘，真誠邀請她再次見面。灰姑娘答應了，但也說希望保有自己的生活與朋友；從此她更相信，勇敢做自己值得被尊重。', cinderellaScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-sleeping-beauty', title: '睡美人', characters: ['艾琳公主', '國王與王后', '森林朋友'], setting: '王宮與沉睡花園', theme: '耐心、關懷與守護', categories: ['溫馨故事', '冒險故事', '睡前故事'],
     scenes: [
-      ['王國的祝福', '艾琳公主出生時，大家送上許多祝福。只有一位沒收到邀請的女巫十分生氣，留下預言：公主長大後會遇到一段長久的沉睡。'],
-      ['溫柔的守護', '王國裡的智者把預言改成：公主會在合適的時候醒來。國王與王后沒有讓她害怕，而是教她認識花園、朋友和生活中的安全規則。'],
-      ['沉睡的花園', '多年後，艾琳在花園裡發現一座舊塔，碰到一朵受魔法影響的花，便安穩地睡著了。花園也變得靜悄悄，大家決定耐心守護她。'],
-      ['朋友們想辦法', '森林裡的動物送來最喜歡的花香與露珠，王宮樂師則練習公主最愛的旋律。沒有人冒險闖進塔裡，他們一起請智者尋找解除魔法的方法。'],
-      ['溫暖的旋律', '智者找到咒語的線索：只有大家真心準備的歌聲，才能喚醒公主。樂師和動物朋友在花園外合奏，音樂沿著窗邊輕輕飄進塔裡。'],
-      ['醒來的早晨', '艾琳聽見熟悉的旋律，慢慢睜開眼睛。她走出塔，看見朋友都在等她，明白長久的陪伴與耐心能帶來希望，王國也再次充滿笑聲。'],
+      ['王國的祝福', '艾琳公主出生時，大家送上許多祝福。只有一位沒收到邀請的女巫十分生氣，留下預言：公主長大後會遇到一段長久的沉睡。', sleepingBeautyScene1],
+      ['溫柔的守護', '王國裡的智者把預言改成：公主會在合適的時候醒來。國王與王后沒有讓她害怕，而是教她認識花園、朋友和生活中的安全規則。', sleepingBeautyScene2],
+      ['沉睡的花園', '多年後，艾琳在花園裡發現一座舊塔，碰到一朵受魔法影響的花，便安穩地睡著了。花園也變得靜悄悄，大家決定耐心守護她。', sleepingBeautyScene3],
+      ['朋友們想辦法', '森林裡的動物送來最喜歡的花香與露珠，王宮樂師則練習公主最愛的旋律。沒有人冒險闖進塔裡，他們一起請智者尋找解除魔法的方法。', sleepingBeautyScene4],
+      ['溫暖的旋律', '智者找到咒語的線索：只有大家真心準備的歌聲，才能喚醒公主。樂師和動物朋友在花園外合奏，音樂沿著窗邊輕輕飄進塔裡。', sleepingBeautyScene5],
+      ['醒來的早晨', '艾琳聽見熟悉的旋律，慢慢睜開眼睛。她走出塔，看見朋友都在等她，明白長久的陪伴與耐心能帶來希望，王國也再次充滿笑聲。', sleepingBeautyScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-pinocchio', title: '木偶奇遇記', characters: ['皮諾丘', '傑佩托', '蟋蟀先生'], setting: '木匠小屋與奇妙旅程', theme: '誠實、責任與成長', categories: ['冒險故事', '趣味故事', '勇氣故事'],
     scenes: [
-      ['會走路的木偶', '木匠傑佩托做了一個木偶，取名皮諾丘。夜裡，藍色仙女讓木偶活了過來，並請蟋蟀先生陪他學習分辨對錯。'],
-      ['第一次上學', '皮諾丘帶著課本出門，途中聽見熱鬧的戲院音樂，便忘了上學的約定。回家後，他坦白自己走錯了方向，鼻子也因魔法長了一小截。'],
-      ['說真話的勇氣', '蟋蟀先生沒有責備他，只陪他把事情說清楚。皮諾丘向傑佩托道歉，並答應用行動改正，鼻子很快恢復原樣。'],
-      ['幫助迷路的朋友', '旅途中，皮諾丘遇見一隻找不到家的小山羊。他沒有貪玩離開，而是陪牠沿著路標尋找牧場，也請路過的大人一起幫忙。'],
-      ['回到小屋', '皮諾丘回家時發現傑佩托正在等他，兩人緊緊擁抱。皮諾丘開始按時上學，也學會先想一想自己的選擇會帶來什麼結果。'],
-      ['成為真正的孩子', '仙女看見皮諾丘懂得守信、照顧家人，也願意承認錯誤，便把他變成真正的小男孩。皮諾丘知道，成長不是從不犯錯，而是願意負責並繼續學習。'],
+      ['會走路的木偶', '木匠傑佩托做了一個木偶，取名皮諾丘。夜裡，藍色仙女讓木偶活了過來，並請蟋蟀先生陪他學習分辨對錯。', pinocchioScene1],
+      ['第一次上學', '皮諾丘帶著課本出門，途中聽見熱鬧的戲院音樂，便忘了上學的約定。回家後，他坦白自己走錯了方向，鼻子也因魔法長了一小截。', pinocchioScene2],
+      ['說真話的勇氣', '蟋蟀先生沒有責備他，只陪他把事情說清楚。皮諾丘向傑佩托道歉，並答應用行動改正，鼻子很快恢復原樣。', pinocchioScene3],
+      ['幫助迷路的朋友', '旅途中，皮諾丘遇見一隻找不到家的小山羊。他沒有貪玩離開，而是陪牠沿著路標尋找牧場，也請路過的大人一起幫忙。', pinocchioScene4],
+      ['回到小屋', '皮諾丘回家時發現傑佩托正在等他，兩人緊緊擁抱。皮諾丘開始按時上學，也學會先想一想自己的選擇會帶來什麼結果。', pinocchioScene5],
+      ['成為真正的孩子', '仙女看見皮諾丘懂得守信、照顧家人，也願意承認錯誤，便把他變成真正的小男孩。皮諾丘知道，成長不是從不犯錯，而是願意負責並繼續學習。', pinocchioScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-emperors-new-clothes', title: '皇帝的新衣', characters: ['皇帝', '裁縫', '小女孩'], setting: '王宮與城鎮廣場', theme: '誠實表達與謙虛', categories: ['趣味故事', '勇氣故事'],
     scenes: [
-      ['喜歡新衣的皇帝', '皇帝很喜歡漂亮衣服，常常忙著挑選新款式。兩位裁縫說能織出一件神奇衣裳，只有聰明的人才看得見。'],
-      ['看不見的布料', '裁縫假裝在織布，皇帝派大臣去查看。大臣什麼也沒看見，卻怕被說不聰明，只好稱讚那塊不存在的布。'],
-      ['準備遊行', '皇帝也看不見布料，心裡有些疑惑，仍決定舉行遊行。城裡的人跟著稱讚，大家都不敢先說出自己的疑問。'],
-      ['孩子說出真相', '遊行經過廣場時，一位小女孩牽著爸爸的手，誠實地說：「皇帝沒有穿新衣呀！」大家先安靜下來，接著也鼓起勇氣說出自己看到的事。'],
-      ['皇帝停下腳步', '皇帝聽見大家的話，沒有生氣，反而停下遊行，向人民承認自己也被虛榮心影響了。他請大臣記下教訓，並請人找裁縫談清楚。'],
-      ['更好的新衣', '皇帝不再追求誇張的服裝，改穿舒適的衣服和人民一起做事。小女孩收到一件真正由大家縫製的外套，王國也學會誠實比討好更有用。'],
+      ['喜歡新衣的皇帝', '皇帝很喜歡漂亮衣服，常常忙著挑選新款式。兩位裁縫說能織出一件神奇衣裳，只有聰明的人才看得見。', emperorsNewClothesScene1],
+      ['看不見的布料', '裁縫假裝在織布，皇帝派大臣去查看。大臣什麼也沒看見，卻怕被說不聰明，只好稱讚那塊不存在的布。', emperorsNewClothesScene2],
+      ['準備遊行', '皇帝也看不見布料，心裡有些疑惑，仍決定舉行遊行。城裡的人跟著稱讚，大家都不敢先說出自己的疑問。', emperorsNewClothesScene3],
+      ['孩子說出真相', '遊行經過廣場時，一位小女孩牽著爸爸的手，誠實地說：「皇帝沒有穿新衣呀！」大家先安靜下來，接著也鼓起勇氣說出自己看到的事。', emperorsNewClothesScene4],
+      ['皇帝停下腳步', '皇帝聽見大家的話，沒有生氣，反而停下遊行，向人民承認自己也被虛榮心影響了。他請大臣記下教訓，並請人找裁縫談清楚。', emperorsNewClothesScene5],
+      ['更好的新衣', '皇帝不再追求誇張的服裝，改穿舒適的衣服和人民一起做事。小女孩收到一件真正由大家縫製的外套，王國也學會誠實比討好更有用。', emperorsNewClothesScene6],
     ],
   }),
   makeClassicStory({
@@ -180,89 +309,89 @@ export const classicStories = [
   makeClassicStory({
     id: 'classic-golden-axe', title: '金斧頭銀斧頭', characters: ['樵夫', '河神'], setting: '清澈的小河邊', theme: '誠實與知足', categories: ['溫馨故事', '勇氣故事'],
     scenes: [
-      ['河邊工作', '一位樵夫每天到河邊整理木材，靠自己的雙手生活。一天，他的鐵斧不小心滑落水中，找了好久都沒有找到。'],
-      ['河神出現', '樵夫坐在岸邊嘆氣，河面忽然亮起柔和的光。河神浮出水面，問他為什麼難過，樵夫便如實說明斧頭的模樣。'],
-      ['金斧頭的考驗', '河神拿出一把金斧頭，問是不是樵夫的。樵夫搖搖頭，說自己的斧頭沒有那麼漂亮，只是一把普通的鐵斧。'],
-      ['銀斧頭也不是', '河神又拿出銀斧頭，樵夫仍然誠實地說不是。河神看見他不貪心，便潛進水裡繼續尋找。'],
-      ['找回自己的斧頭', '這回河神拿出樵夫熟悉的鐵斧。樵夫高興地認回它，感謝河神幫忙，也保證會珍惜自己的工具。'],
-      ['誠實帶來的禮物', '河神欣賞樵夫的誠實，把三把斧頭都送給他。樵夫只收下自己的鐵斧，並把金銀斧頭交給村長妥善保管，大家都稱讚他的正直。'],
+      ['河邊工作', '一位樵夫每天到河邊整理木材，靠自己的雙手生活。一天，他的鐵斧不小心滑落水中，找了好久都沒有找到。', goldenAxeScene1],
+      ['河神出現', '樵夫坐在岸邊嘆氣，河面忽然亮起柔和的光。河神浮出水面，問他為什麼難過，樵夫便如實說明斧頭的模樣。', goldenAxeScene2],
+      ['金斧頭的考驗', '河神拿出一把金斧頭，問是不是樵夫的。樵夫搖搖頭，說自己的斧頭沒有那麼漂亮，只是一把普通的鐵斧。', goldenAxeScene3],
+      ['銀斧頭也不是', '河神又拿出銀斧頭，樵夫仍然誠實地說不是。河神看見他不貪心，便潛進水裡繼續尋找。', goldenAxeScene4],
+      ['找回自己的斧頭', '這回河神拿出樵夫熟悉的鐵斧。樵夫高興地認回它，感謝河神幫忙，也保證會珍惜自己的工具。', goldenAxeScene5],
+      ['誠實帶來的禮物', '河神欣賞樵夫的誠實，把三把斧頭都送給他。樵夫只收下自己的鐵斧，並把金銀斧頭交給村長妥善保管，大家都稱讚他的正直。', goldenAxeScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-boy-who-cried-wolf', title: '狼來了', characters: ['牧羊童', '村民', '羊群'], setting: '山坡牧場', theme: '誠信與負責', categories: ['動物故事', '勇氣故事'],
     scenes: [
-      ['山坡上的日子', '牧羊童每天帶羊群到山坡吃草，工作有時很安靜。為了讓大家注意他，他忽然大喊：「狼來了！」'],
-      ['第一次玩笑', '村民急忙拿著工具跑上山，卻發現牧羊童在笑。大家提醒他不要用危險的事開玩笑，他答應了，心裡卻沒有認真記住。'],
-      ['又一次呼喊', '過了幾天，牧羊童又喊狼來了，村民再次趕來。這回大家更失望了，告訴他信任需要靠誠實一點一點建立。'],
-      ['真正的危急時刻', '傍晚時，牧羊童真的看見一隻狼在遠處靠近羊群。他立刻用牧場的鈴聲發出求助訊號，再把羊群帶到有圍欄的安全地方。'],
-      ['村民趕來', '村民聽見特別的鈴聲，知道這回不是玩笑，便一起來幫忙。他們用燈光和響聲把狼引回森林，羊群都平安無事。'],
-      ['重新建立信任', '牧羊童向大家道歉，坦白自己曾說過謊，也提出每天記錄羊群和巡查圍欄。村民接受他的道歉，但提醒他要用長久的誠實重新贏得信任。'],
+      ['山坡上的日子', '牧羊童每天帶羊群到山坡吃草，工作有時很安靜。為了讓大家注意他，他忽然大喊：「狼來了！」', boyWhoCriedWolfScene1],
+      ['第一次玩笑', '村民急忙拿著工具跑上山，卻發現牧羊童在笑。大家提醒他不要用危險的事開玩笑，他答應了，心裡卻沒有認真記住。', boyWhoCriedWolfScene2],
+      ['又一次呼喊', '過了幾天，牧羊童又喊狼來了，村民再次趕來。這回大家更失望了，告訴他信任需要靠誠實一點一點建立。', boyWhoCriedWolfScene3],
+      ['真正的危急時刻', '傍晚時，牧羊童真的看見一隻狼在遠處靠近羊群。他立刻用牧場的鈴聲發出求助訊號，再把羊群帶到有圍欄的安全地方。', boyWhoCriedWolfScene4],
+      ['村民趕來', '村民聽見特別的鈴聲，知道這回不是玩笑，便一起來幫忙。他們用燈光和響聲把狼引回森林，羊群都平安無事。', boyWhoCriedWolfScene5],
+      ['重新建立信任', '牧羊童向大家道歉，坦白自己曾說過謊，也提出每天記錄羊群和巡查圍欄。村民接受他的道歉，但提醒他要用長久的誠實重新贏得信任。', boyWhoCriedWolfScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-north-wind-and-sun', title: '北風與太陽', characters: ['北風', '太陽', '旅人'], setting: '山路與原野', theme: '溫和與理解', categories: ['趣味故事', '冒險故事'],
     scenes: [
-      ['誰比較有力量', '北風和太陽在山頂聊天，爭論誰的力量比較大。這時，一位旅人披著外套，正沿著山路慢慢前行。'],
-      ['北風先試試', '北風鼓起力氣吹出強風，旅人的外套被吹得飄動。旅人趕緊把外套抓緊，還把衣領扣好，走得更小心。'],
-      ['越急越抓緊', '北風吹得更大，旅人便停在石牆旁避風。北風累得直喘氣，外套仍牢牢穿在旅人身上。'],
-      ['太陽的方式', '太陽沒有催促旅人，只送來溫暖的陽光。旅人感覺舒服，便走到樹蔭下休息一會兒。'],
-      ['旅人脫下外套', '陽光更加柔和明亮，旅人覺得身上暖和，自己把外套脫下來摺好，放進背包裡。太陽沒有逼他，只讓他感到自在。'],
-      ['懂得不同方法', '北風承認猛烈不一定有效，太陽也說每種力量都有適合的時候。兩位朋友一起為旅人照亮山路，旅人輕鬆地抵達目的地。'],
+      ['誰比較有力量', '北風和太陽在山頂聊天，爭論誰的力量比較大。這時，一位旅人披著外套，正沿著山路慢慢前行。', northWindSunScene1],
+      ['北風先試試', '北風鼓起力氣吹出強風，旅人的外套被吹得飄動。旅人趕緊把外套抓緊，還把衣領扣好，走得更小心。', northWindSunScene2],
+      ['越急越抓緊', '北風吹得更大，旅人便停在石牆旁避風。北風累得直喘氣，外套仍牢牢穿在旅人身上。', northWindSunScene3],
+      ['太陽的方式', '太陽沒有催促旅人，只送來溫暖的陽光。旅人感覺舒服，便走到樹蔭下休息一會兒。', northWindSunScene4],
+      ['旅人脫下外套', '陽光更加柔和明亮，旅人覺得身上暖和，自己把外套脫下來摺好，放進背包裡。太陽沒有逼他，只讓他感到自在。', northWindSunScene5],
+      ['懂得不同方法', '北風承認猛烈不一定有效，太陽也說每種力量都有適合的時候。兩位朋友一起為旅人照亮山路，旅人輕鬆地抵達目的地。', northWindSunScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-ant-and-cricket', title: '螞蟻與蟋蟀', characters: ['螞蟻', '蟋蟀'], setting: '草地與螞蟻的家', theme: '勤勞、分享與找到平衡', categories: ['動物故事', '溫馨故事', '趣味故事'],
     scenes: [
-      ['夏日的歌聲', '夏天的草地上，蟋蟀每天唱歌，螞蟻則搬運種子和葉片。蟋蟀邀螞蟻一起玩，螞蟻說先把工作做好，晚點再來聽歌。'],
-      ['不同的選擇', '蟋蟀覺得夏天還很長，不必急著準備。螞蟻則和同伴合作，把食物收好，也留出時間休息與玩耍。'],
-      ['秋風吹起', '秋天來了，草地漸漸變冷，蟋蟀發現自己沒有準備過冬的地方。牠不再逞強，鼓起勇氣去向螞蟻求助。'],
-      ['伸出援手', '螞蟻讓蟋蟀到家裡休息，並和牠分享一些食物。蟋蟀感謝大家，答應幫忙整理屋子，也為螞蟻們唱歌。'],
-      ['一起分工', '冬天裡，蟋蟀用音樂陪伴大家，螞蟻教牠規劃每天的工作。牠們發現努力和休息都重要，互相幫助讓生活更溫暖。'],
-      ['春天的新約定', '春天一到，蟋蟀和螞蟻一起整理草地，準備下個季節的生活。大家約好工作時合作，休息時也一起玩，分享各自擅長的事情。'],
+      ['夏日的歌聲', '夏天的草地上，蟋蟀每天唱歌，螞蟻則搬運種子和葉片。蟋蟀邀螞蟻一起玩，螞蟻說先把工作做好，晚點再來聽歌。', antAndCricketScene1],
+      ['不同的選擇', '蟋蟀覺得夏天還很長，不必急著準備。螞蟻則和同伴合作，把食物收好，也留出時間休息與玩耍。', antAndCricketScene2],
+      ['秋風吹起', '秋天來了，草地漸漸變冷，蟋蟀發現自己沒有準備過冬的地方。牠不再逞強，鼓起勇氣去向螞蟻求助。', antAndCricketScene3],
+      ['伸出援手', '螞蟻讓蟋蟀到家裡休息，並和牠分享一些食物。蟋蟀感謝大家，答應幫忙整理屋子，也為螞蟻們唱歌。', antAndCricketScene4],
+      ['一起分工', '冬天裡，蟋蟀用音樂陪伴大家，螞蟻教牠規劃每天的工作。牠們發現努力和休息都重要，互相幫助讓生活更溫暖。', antAndCricketScene5],
+      ['春天的新約定', '春天一到，蟋蟀和螞蟻一起整理草地，準備下個季節的生活。大家約好工作時合作，休息時也一起玩，分享各自擅長的事情。', antAndCricketScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-great-turnip', title: '拔蘿蔔', characters: ['老爺爺', '老奶奶', '小孫女', '小狗', '小貓', '小老鼠'], setting: '菜園', theme: '合作與團結', categories: ['動物故事', '溫馨故事', '趣味故事'],
     scenes: [
-      ['種下一顆種子', '老爺爺在菜園種下一顆蘿蔔種子，每天澆水、除草。老奶奶和小孫女也常來看看，盼著它快快長大。'],
-      ['長成大蘿蔔', '幾場春雨過後，蘿蔔長得又大又高。老爺爺抓住葉子往上拔，蘿蔔卻像在土裡睡著了一樣，怎麼也不動。'],
-      ['一家人來幫忙', '老爺爺請老奶奶幫忙，老奶奶又拉著小孫女。三個人一起喊著口號用力，蘿蔔還是牢牢留在土裡。'],
-      ['動物朋友加入', '小狗、小貓聽見呼喚，排成一列加入隊伍。大家一個拉著一個，努力向後退，蘿蔔終於輕輕晃了一下。'],
-      ['最小的幫手', '小老鼠也來幫忙，站在隊伍最後面抓住小貓的尾巴。大家一起數到三，用力往後拉，大蘿蔔「啵」地一聲被拔出來。'],
-      ['分享收成', '大家把大蘿蔔洗乾淨，切成一鍋香甜的湯。每個人都分到一碗，還留下一些送給鄰居；大家知道，再小的幫忙也能讓團隊更有力量。'],
+      ['種下一顆種子', '老爺爺在菜園種下一顆蘿蔔種子，每天澆水、除草。老奶奶和小孫女也常來看看，盼著它快快長大。', greatTurnipScene1],
+      ['長成大蘿蔔', '幾場春雨過後，蘿蔔長得又大又高。老爺爺抓住葉子往上拔，蘿蔔卻像在土裡睡著了一樣，怎麼也不動。', greatTurnipScene2],
+      ['一家人來幫忙', '老爺爺請老奶奶幫忙，老奶奶又拉著小孫女。三個人一起喊著口號用力，蘿蔔還是牢牢留在土裡。', greatTurnipScene3],
+      ['動物朋友加入', '小狗、小貓聽見呼喚，排成一列加入隊伍。大家一個拉著一個，努力向後退，蘿蔔終於輕輕晃了一下。', greatTurnipScene4],
+      ['最小的幫手', '小老鼠也來幫忙，站在隊伍最後面抓住小貓的尾巴。大家一起數到三，用力往後拉，大蘿蔔「啵」地一聲被拔出來。', greatTurnipScene5],
+      ['分享收成', '大家把大蘿蔔洗乾淨，切成一鍋香甜的湯。每個人都分到一碗，還留下一些送給鄰居；大家知道，再小的幫忙也能讓團隊更有力量。', greatTurnipScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-monkey-king-heaven', title: '孫悟空大鬧天宮', characters: ['孫悟空', '玉皇大帝', '天庭仙友'], setting: '花果山與天庭', theme: '力量、責任與自我控制', categories: ['動物故事', '冒險故事', '趣味故事'],
     scenes: [
-      ['花果山的美猴王', '孫悟空在花果山和猴子猴孫一起生活，大家都很喜歡他的機靈。一天，他聽說天庭有許多新奇的地方，便想去看看。'],
-      ['初到天庭', '悟空受邀到天庭做客，卻覺得安排的職務太小，不知道如何把自己的想法說清楚。天庭仙友請他先冷靜，再一起討論適合的工作。'],
-      ['一連串的玩笑', '悟空趁大家忙碌時四處探索，還把宴會座位重新排列，弄得仙友找不到自己的位置。大家提醒他，玩笑若讓別人困擾，就該停下來。'],
-      ['天宮變得混亂', '悟空又在花園裡追著彩雲跑，打翻了幾籃仙桃，天庭一時忙成一團。玉皇大帝沒有動怒，而是請悟空看看自己的行為帶來了什麼影響。'],
-      ['一起整理善後', '悟空看見大家收拾得很辛苦，終於明白自己太任性了。他向仙友道歉，和大家一起把花園整理好，也補種新的桃樹。'],
-      ['回到花果山', '悟空帶著新朋友回花果山分享故事，並約定下次做客先遵守規則。大家一起舉辦和平的桃子宴，悟空也學會真正的本領要用來照顧同伴。'],
+      ['花果山的美猴王', '孫悟空在花果山和猴子猴孫一起生活，大家都很喜歡他的機靈。一天，他聽說天庭有許多新奇的地方，便想去看看。', monkeyKingHeavenScene1],
+      ['初到天庭', '悟空受邀到天庭做客，卻覺得安排的職務太小，不知道如何把自己的想法說清楚。天庭仙友請他先冷靜，再一起討論適合的工作。', monkeyKingHeavenScene2],
+      ['一連串的玩笑', '悟空趁大家忙碌時四處探索，還把宴會座位重新排列，弄得仙友找不到自己的位置。大家提醒他，玩笑若讓別人困擾，就該停下來。', monkeyKingHeavenScene3],
+      ['天宮變得混亂', '悟空又在花園裡追著彩雲跑，打翻了幾籃仙桃，天庭一時忙成一團。玉皇大帝沒有動怒，而是請悟空看看自己的行為帶來了什麼影響。', monkeyKingHeavenScene4],
+      ['一起整理善後', '悟空看見大家收拾得很辛苦，終於明白自己太任性了。他向仙友道歉，和大家一起把花園整理好，也補種新的桃樹。', monkeyKingHeavenScene5],
+      ['回到花果山', '悟空帶著新朋友回花果山分享故事，並約定下次做客先遵守規則。大家一起舉辦和平的桃子宴，悟空也學會真正的本領要用來照顧同伴。', monkeyKingHeavenScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-change-moon', title: '嫦娥奔月', characters: ['嫦娥', '后羿', '玉兔'], setting: '人間村落與月宮', theme: '思念、善良與團圓', categories: ['溫馨故事', '睡前故事'],
     scenes: [
-      ['天空的難題', '很久以前，天空出現了許多太陽，田地變得乾燥，村民十分辛苦。勇敢的后羿走遍山川，幫大家尋找讓大地重新涼爽的方法。'],
-      ['村民一起努力', '后羿找到調節天候的方法，村民也一起挖水渠、照顧作物。嫦娥則分享食物和種子，讓每個人都能度過困難的日子。'],
-      ['珍貴的仙藥', '一位長者送給嫦娥一份能前往月宮的仙藥，說那是守護家園的禮物。嫦娥沒有急著使用，而是先和后羿商量如何保管。'],
-      ['意外的分離', '一次夜晚，仙藥被風吹散，嫦娥為了不讓它落到壞人手裡，意外乘著月光升上天空。她望著下方的家園，心裡非常想念親友。'],
-      ['月宮的玉兔', '嫦娥在月宮遇見一隻忙著搗藥的玉兔。玉兔知道她思念家人，便陪她在月宮種下桂花，也想出在月圓時傳送思念的辦法。'],
-      ['月圓的祝福', '從此每逢月圓，嫦娥和玉兔都會望向人間，村民也在院子裡賞月、分享月餅。大家相信，無論相隔多遠，關心與思念都能像月光一樣照亮彼此。'],
+      ['天空的難題', '很久以前，天空出現了許多太陽，田地變得乾燥，村民十分辛苦。勇敢的后羿走遍山川，幫大家尋找讓大地重新涼爽的方法。', changeMoonScene1],
+      ['村民一起努力', '后羿找到調節天候的方法，村民也一起挖水渠、照顧作物。嫦娥則分享食物和種子，讓每個人都能度過困難的日子。', changeMoonScene2],
+      ['珍貴的仙藥', '一位長者送給嫦娥一份能前往月宮的仙藥，說那是守護家園的禮物。嫦娥沒有急著使用，而是先和后羿商量如何保管。', changeMoonScene3],
+      ['意外的分離', '一次夜晚，仙藥被風吹散，嫦娥為了不讓它落到壞人手裡，意外乘著月光升上天空。她望著下方的家園，心裡非常想念親友。', changeMoonScene4],
+      ['月宮的玉兔', '嫦娥在月宮遇見一隻忙著搗藥的玉兔。玉兔知道她思念家人，便陪她在月宮種下桂花，也想出在月圓時傳送思念的辦法。', changeMoonScene5],
+      ['月圓的祝福', '從此每逢月圓，嫦娥和玉兔都會望向人間，村民也在院子裡賞月、分享月餅。大家相信，無論相隔多遠，關心與思念都能像月光一樣照亮彼此。', changeMoonScene6],
     ],
   }),
   makeClassicStory({
     id: 'classic-little-prince', title: '小王子', characters: ['小王子', '玫瑰', '狐狸', '飛行員'], setting: '小行星、沙漠與星際旅程', theme: '友誼、責任與珍惜', categories: ['冒險故事', '溫馨故事', '睡前故事'],
     scenes: [
-      ['小小的星球', '小王子住在一顆小小的星球上，每天整理火山、拔掉新冒出的樹苗，也細心照顧一朵玫瑰。玫瑰有時驕傲，有時又很需要陪伴。'],
-      ['出發旅行', '小王子想了解遠方，便拜訪幾顆星球，遇見忙著命令、計算和被稱讚的大人。每一站都讓他疑惑：大家為什麼忘了欣賞眼前的風景？'],
-      ['沙漠裡的飛行員', '小王子來到地球，在沙漠遇見一位飛機故障的飛行員。兩人一邊找水，一邊分享各自的故事，漸漸成為互相理解的朋友。'],
-      ['狐狸的請求', '狐狸希望小王子每天固定來陪牠，讓彼此慢慢熟悉。小王子照著約定前來，終於明白花園裡有很多玫瑰，但自己的玫瑰因為被他照顧，對他特別珍貴。'],
-      ['想念玫瑰', '小王子開始想念自己的星球與玫瑰，擔心她獨自面對風雨。飛行員也想起自己重要的人，兩人決定珍惜相遇的時光，並用心記住彼此的約定。'],
-      ['星光下的約定', '小王子帶著狐狸教他的友誼回到星際旅程，飛行員也修好飛機回家。每當夜空閃爍，飛行員便想起小王子的笑聲，知道愛與責任讓遠方的人仍能彼此陪伴。'],
+      ['小小的星球', '小王子住在一顆小小的星球上，每天整理火山、拔掉新冒出的樹苗，也細心照顧一朵玫瑰。玫瑰有時驕傲，有時又很需要陪伴。', littlePrinceScene1],
+      ['出發旅行', '小王子想了解遠方，便拜訪幾顆星球，遇見忙著命令、計算和被稱讚的大人。每一站都讓他疑惑：大家為什麼忘了欣賞眼前的風景？', littlePrinceScene2],
+      ['沙漠裡的飛行員', '小王子來到地球，在沙漠遇見一位飛機故障的飛行員。兩人一邊找水，一邊分享各自的故事，漸漸成為互相理解的朋友。', littlePrinceScene3],
+      ['狐狸的請求', '狐狸希望小王子每天固定來陪牠，讓彼此慢慢熟悉。小王子照著約定前來，終於明白花園裡有很多玫瑰，但自己的玫瑰因為被他照顧，對他特別珍貴。', littlePrinceScene4],
+      ['想念玫瑰', '小王子開始想念自己的星球與玫瑰，擔心她獨自面對風雨。飛行員也想起自己重要的人，兩人決定珍惜相遇的時光，並用心記住彼此的約定。', littlePrinceScene5],
+      ['星光下的約定', '小王子帶著狐狸教他的友誼回到星際旅程，飛行員也修好飛機回家。每當夜空閃爍，飛行員便想起小王子的笑聲，知道愛與責任讓遠方的人仍能彼此陪伴。', littlePrinceScene6],
     ],
   }),
   makeClassicStory({
@@ -273,11 +402,11 @@ export const classicStories = [
     ],
     setting: '森林步道與小溪', theme: '安全、合作與探索', categories: ['冒險故事', '勇氣故事', '溫馨故事'],
     scenes: [
-      ['準備出發', 'Ray 和 Tracy 帶好水壺，準備和家人一起去森林散步。他們記得要跟著家人，不離開安全的步道。'],
-      ['森林路標', '他們沿著清楚的路標慢慢前進，邊走邊觀察不同形狀的葉子。Ray 發現一片葉子像小手，Tracy 開心地笑了。'],
-      ['小溪邊的發現', '來到小溪旁，他們看見一隻小蝴蝶停在花朵旁。Ray 和 Tracy 安靜地欣賞，不去抓牠。'],
-      ['聽見求助聲', '他們發現一隻迷路的小兔子。兩人留在安全的步道旁，沒有自己跑去找，而是請同行的大人一起幫忙。'],
-      ['平安回到營地', '最後，小兔子找到了家人。Ray 和 Tracy 也平安回到營地，開心地分享今天看到的蝴蝶、葉子和小兔子。'],
+      ['準備出發', 'Ray 和 Tracy 帶好水壺，準備和家人一起去森林散步。他們記得要跟著家人，不離開安全的步道。', rayTracyForestScene1],
+      ['森林路標', '他們沿著清楚的路標慢慢前進，邊走邊觀察不同形狀的葉子。Ray 發現一片葉子像小手，Tracy 開心地笑了。', rayTracyForestScene2],
+      ['小溪邊的發現', '來到小溪旁，他們看見一隻小蝴蝶停在花朵旁。Ray 和 Tracy 安靜地欣賞，不去抓牠。', rayTracyForestScene3],
+      ['聽見求助聲', '他們發現一隻迷路的小兔子。兩人留在安全的步道旁，沒有自己跑去找，而是請同行的大人一起幫忙。', rayTracyForestScene4],
+      ['平安回到營地', '最後，小兔子找到了家人。Ray 和 Tracy 也平安回到營地，開心地分享今天看到的蝴蝶、葉子和小兔子。', rayTracyForestScene5],
     ],
   }),
   makeClassicStory({
@@ -288,11 +417,11 @@ export const classicStories = [
     ],
     setting: '下雨的家中與窗邊', theme: '合作、想像與雨天安全', categories: ['溫馨故事', '趣味故事'],
     scenes: [
-      ['窗外下起雨', '雨滴一顆一顆落在窗戶上。Ray 和 Tracy 發現原本的戶外計畫不能照原來的方式進行了。'],
-      ['搭起小帳篷', 'Ray 和 Tracy 和家人一起用毯子搭成一座小小的閱讀小屋。大家準備好故事書，開心地坐在裡面。'],
-      ['雨聲樂隊', '兩人聽著窗外的雨聲，輕輕用手拍出不同節奏。他們猜猜看，哪一種聲音最像小鼓。'],
-      ['尋找雨天顏色', '雨慢慢停了。Ray 和 Tracy 在大人陪伴下從窗邊找找看天空中的彩虹顏色。'],
-      ['最棒的雨天', 'Ray 和 Tracy 把今天的雨天冒險畫成一張圖。他們發現，就算改變原來的計畫，也能創造出快樂又有趣的一天。'],
+      ['窗外下起雨', '雨滴一顆一顆落在窗戶上。Ray 和 Tracy 發現原本的戶外計畫不能照原來的方式進行了。', rayTracyRainyDayScene1],
+      ['搭起小帳篷', 'Ray 和 Tracy 和家人一起用毯子搭成一座小小的閱讀小屋。大家準備好故事書，開心地坐在裡面。', rayTracyRainyDayScene2],
+      ['雨聲樂隊', '兩人聽著窗外的雨聲，輕輕用手拍出不同節奏。他們猜猜看，哪一種聲音最像小鼓。', rayTracyRainyDayScene3],
+      ['尋找雨天顏色', '雨慢慢停了。Ray 和 Tracy 在大人陪伴下從窗邊找找看天空中的彩虹顏色。', rayTracyRainyDayScene4],
+      ['最棒的雨天', 'Ray 和 Tracy 把今天的雨天冒險畫成一張圖。他們發現，就算改變原來的計畫，也能創造出快樂又有趣的一天。', rayTracyRainyDayScene5],
     ],
   }),
   makeClassicStory({
@@ -303,11 +432,11 @@ export const classicStories = [
     ],
     setting: '夜晚的房間與星空', theme: '好奇、陪伴與睡前安心', categories: ['睡前故事', '冒險故事', '溫馨故事'],
     scenes: [
-      ['少了一顆星星', '睡前時，Tracy 發現窗外好像少了一顆熟悉的星星。原來，一大片雲朵正好把星星遮住了。'],
-      ['星星觀察卡', 'Ray 拿出紙和筆，和 Tracy 一起做一張星星觀察卡。他們記下看見的星星形狀與位置。'],
-      ['雲朵慢慢走', '兩人在房間裡安靜等待雲朵飄開。家人告訴他們，雲朵會暫時遮住星光，但星星並沒有消失。'],
-      ['星星回來了', '過了一會兒，雲朵慢慢散開，那顆熟悉的星星又出現在天空中。原來它一直都在，只是暫時被雲遮住了。'],
-      ['帶著星光入睡', 'Ray 和 Tracy 互道晚安，把星星觀察卡放在床邊。兩人帶著安心的心情，慢慢進入甜甜的夢鄉。'],
+      ['少了一顆星星', '睡前時，Tracy 發現窗外好像少了一顆熟悉的星星。原來，一大片雲朵正好把星星遮住了。', rayTracyFindStarsScene1],
+      ['星星觀察卡', 'Ray 拿出紙和筆，和 Tracy 一起做一張星星觀察卡。他們記下看見的星星形狀與位置。', rayTracyFindStarsScene2],
+      ['雲朵慢慢走', '兩人在房間裡安靜等待雲朵飄開。家人告訴他們，雲朵會暫時遮住星光，但星星並沒有消失。', rayTracyFindStarsScene3],
+      ['星星回來了', '過了一會兒，雲朵慢慢散開，那顆熟悉的星星又出現在天空中。原來它一直都在，只是暫時被雲遮住了。', rayTracyFindStarsScene4],
+      ['帶著星光入睡', 'Ray 和 Tracy 互道晚安，把星星觀察卡放在床邊。兩人帶著安心的心情，慢慢進入甜甜的夢鄉。', rayTracyFindStarsScene5],
     ],
   }),
 ];
