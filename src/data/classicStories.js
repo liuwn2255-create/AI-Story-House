@@ -4,6 +4,12 @@ import littleRedScene3 from '../assets/stories/little-red-riding-hood/scene-03.w
 import littleRedScene4 from '../assets/stories/little-red-riding-hood/scene-04.webp';
 import littleRedScene5 from '../assets/stories/little-red-riding-hood/scene-05.webp';
 import littleRedScene6 from '../assets/stories/little-red-riding-hood/scene-06.webp';
+import aliBabaScene1 from '../assets/classic-stories/ali-baba/scene-1.webp';
+import aliBabaScene2 from '../assets/classic-stories/ali-baba/scene-2.webp';
+import aliBabaScene3 from '../assets/classic-stories/ali-baba/scene-3.webp';
+import aliBabaScene4 from '../assets/classic-stories/ali-baba/scene-4.webp';
+import aliBabaScene5 from '../assets/classic-stories/ali-baba/scene-5.webp';
+import aliBabaScene6 from '../assets/classic-stories/ali-baba/scene-6.webp';
 
 function makeClassicStory({ id, title, characters, setting, theme, categories, scenes }) {
   return {
@@ -163,12 +169,12 @@ export const classicStories = [
   makeClassicStory({
     id: 'classic-ali-baba', title: '阿里巴巴與四十大盜', characters: ['阿里巴巴', '馬爾吉娜', '四十大盜'], setting: '山谷與小鎮', theme: '機智、勇敢與守護鄰里', categories: ['冒險故事', '勇氣故事'],
     scenes: [
-      ['樵夫的發現', '樵夫阿里巴巴在山谷工作時，遠遠看見一群人走向岩壁。帶頭的人說出「芝麻開門」，岩石竟打開一道門，眾人進入山洞。'],
-      ['藏在山洞的秘密', '等人離開後，阿里巴巴也用咒語打開岩門。他發現裡面有許多財物，便只帶走足夠改善生活的一小袋，沒有拿走更多。'],
-      ['分享與疑問', '阿里巴巴把經過告訴家人，並拿出部分財物幫助有需要的鄰居。馬爾吉娜提醒大家，山洞的秘密可能讓村民遇到危險，應想辦法通知守衛。'],
-      ['聰明的線索', '四十大盜發現有人進過山洞，開始在小鎮打聽。馬爾吉娜察覺他們的行蹤，提醒大家留在安全的家中，自己則去找村長和守衛。'],
-      ['村民一起守護', '村長安排守衛在廣場巡邏，居民也互相照看。阿里巴巴提供山谷的地圖，馬爾吉娜帶領守衛找到岩門，盜賊們只好放下念頭離開。'],
-      ['把寶藏用在好地方', '村長將洞中的財物交由大家商量，拿出一部分修繕水井與學堂。阿里巴巴和馬爾吉娜明白，真正的寶藏是機智合作、誠實分享和彼此守護。'],
+      ['樵夫的發現', '樵夫阿里巴巴在山谷工作時，遠遠看見一群人走向岩壁。帶頭的人說出「芝麻開門」，岩石竟打開一道門，眾人進入山洞。', aliBabaScene1],
+      ['藏在山洞的秘密', '等人離開後，阿里巴巴也用咒語打開岩門。他發現裡面有許多財物，便只帶走足夠改善生活的一小袋，沒有拿走更多。', aliBabaScene2],
+      ['分享與疑問', '阿里巴巴把經過告訴家人，並拿出部分財物幫助有需要的鄰居。馬爾吉娜提醒大家，山洞的秘密可能讓村民遇到危險，應想辦法通知守衛。', aliBabaScene3],
+      ['聰明的線索', '四十大盜發現有人進過山洞，開始在小鎮打聽。馬爾吉娜察覺他們的行蹤，提醒大家留在安全的家中，自己則去找村長和守衛。', aliBabaScene4],
+      ['村民一起守護', '村長安排守衛在廣場巡邏，居民也互相照看。阿里巴巴提供山谷的地圖，馬爾吉娜帶領守衛找到岩門，盜賊們只好放下念頭離開。', aliBabaScene5],
+      ['把寶藏用在好地方', '村長將洞中的財物交由大家商量，拿出一部分修繕水井與學堂。阿里巴巴和馬爾吉娜明白，真正的寶藏是機智合作、誠實分享和彼此守護。', aliBabaScene6],
     ],
   }),
   makeClassicStory({
